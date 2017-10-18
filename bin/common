@@ -20,10 +20,3 @@ npm install -g gulp nodemon protractor bower mocha yo
 webdriver-manager update
 npm install
 bower install --allow-root --force-latest
-
-# CI
-# sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 20
-# sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 20
-# pip install awsebcli==3.7.4
-# npm install -g npm@3.8.9
-# eval "$(aws ecr get-login --region eu-west-1)"
