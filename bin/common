@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -e
+set -a
+
+function get_application_dependencies {
+  application_dependencies=$(cat package.json | jq '.applications | keys' | tr -d [],\"  | tr -d ' ' | sed '1d;$d' || true)
+}
+
+function get_dependencies_containers {
+  get_application_dependencies
+  dependencies_containers=""
+  for dep_name in $application_dependencies; do
+    dependencies_containers+=$(cat package.json | jq " .applications | .\"$dep_name\" " | tr -d '"' || true)
+    dependencies_containers+=" "
+  done
+}
+
+npm install -g gulp nodemon protractor bower mocha yo
+webdriver-manager update
+npm install
+bower install --allow-root --force-latest
+
+# CI
+# sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 20
+# sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 20
+# pip install awsebcli==3.7.4
+# npm install -g npm@3.8.9
+# eval "$(aws ecr get-login --region eu-west-1)"

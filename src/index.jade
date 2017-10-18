@@ -1,0 +1,87 @@
+doctype html
+
+html(ng-app="app" ng-controller="RootController")
+
+  head
+    include /includes/styles
+    
+    title Vitor Ribeiro
+    link(rel="shortcut icon" href="/images/vitor.jpg")
+
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+  body(
+    ng-cloak=""
+    layout="column"
+    ng-init="screen.screen.show=false"
+    ng-show="screen.screen.show"
+  )
+    md-toolbar(ng-show="!screen.isSidebarLocked()")
+      .md-toolbar-tools
+        md-button.md-icon-button(
+          aria-label="Menu"
+          ng-click="screen.toggleSidebar('sidebar')"
+          ng-show="!screen.isSidebarLocked()"
+        )
+          i.material-icons menu
+        span(flex="", md-truncate="") Vitor Ribeiro
+        
+    .app(layout="row")
+    
+      md-sidenav.md-sidenav-left(
+        md-component-id="sidebar"
+        md-is-locked-open="screen.isSidebarLocked()"
+        md-whiteframe="4"
+        layout="column"
+      )
+        md-list(flex="")
+          md-list-item(
+            ng-repeat-start="parent in menu.items"
+            ng-click="menu.select($index, -1)"
+            ng-class="{true: 'selected', false: null}[menu.isSelected($index, -1)]"
+            layout-align="start center"
+          ) 
+            .md-list-item-text(flex="") {{parent.title}}
+            
+            .expand(
+              ng-show="parent.children"
+              layout-align="start center"
+            )
+              i.material-icons(ng-show="!parent.show") expand_more
+              i.material-icons(ng-show="parent.show") expand_less
+          
+          md-list-item(
+            ng-show="parent.show"
+            ng-repeat-end=""
+            ng-repeat="child in parent.children"
+            ng-click="menu.select($parent.$index, $index)"
+            ng-class="{true: 'selected', false: null}[menu.isSelected($parent.$index, $index)]"
+          )
+            .md-list-item-text(
+              flex=""
+              style="padding-left: 16px;"
+            ) {{child}}
+
+      md-content.main(flex="")
+      
+        .profile(
+          ng-if="menu.selected.parent==0"
+          ng-show="menu.isReady"
+        )
+          include /views/profile
+          
+        .research(
+          ng-if="menu.selected.parent==1"
+          ng-show="menu.isReady"
+        )
+          include /views/research
+        
+        .projects(
+          ng-if="menu.selected.parent==2"
+          ng-show="menu.isReady"
+        )
+          include /views/projects
+
+  include /includes/scripts

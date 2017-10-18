@@ -1,0 +1,23 @@
+section#projects(layout="column")
+  
+  md-card(layout="column" ng-repeat="project in projects")
+    .project-content(layout="column")
+      span.md-headline.project-title {{project.title}}
+      .project-details(layout="row")
+        a(ng-href="{{project.url}}" target="_blank")
+          img.project(ng-src='{{project.img}}')
+        .project-description(
+          layout="column"
+          layout-align="start center"
+        )
+          span {{project.description}}
+      .project-tag-divider
+        md-divider
+      .project-tags(layout="row")
+        .project-tag(ng-repeat="tag in project.tags")
+          img.tag(
+            ng-src='{{getTagImage(tag)}}'
+            height="30" 
+            width="30"
+          )
+          md-tooltip(md-direction='top') {{getTagName(tag)}}

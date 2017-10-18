@@ -1,0 +1,44 @@
+section#research
+  md-subheader
+    span.md-headline Introduction
+  .research_introduction(layout="column" layout-padding="")
+  
+    md-list(flex="")
+      md-list-item
+        .md-list-item-text.research(flex="" layout="column")
+          span(ng-repeat="text in research.description") {{text}}
+  
+section#research_highlights
+  md-subheader
+    span.md-headline Highlights
+  .research_highlights(layout="column" layout-padding="")
+    md-list(flex="")
+      md-list-item(
+        ng-repeat="highlight in research.highlights"
+        layout="row" 
+        layout-align="start center" 
+      )
+        i.material-icons chevron_right
+        .md-list-item-text(
+          flex=""
+        ) {{highlight}}
+            
+section#research_links
+  md-subheader
+    span.md-headline Links
+  .research_links(layout="column" layout-padding="")
+    md-list(flex="")
+      md-list-item(
+        ng-repeat="link in research.links"
+        layout="row" 
+        layout-align="start center" 
+      )
+        i.material-icons chevron_right
+        a(
+          ng-href="{{link.url}}" 
+          target="_blank"
+          ng-attr-download="{{link.isDownloadable}}"
+        )
+          .md-list-item-text(
+            flex=""
+          ) {{link.title}}

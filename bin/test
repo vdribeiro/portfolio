@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+set -a
+
+if [ $# -eq 1 ]; then ARG=$1; else ARG="${ENV:="dev"}"; fi
+
+if [ "$ARG" == "dev" ]; then
+  source bin/env $ARG
+  ./node_modules/karma/bin/karma start test/karma.conf.js
+
+elif [ "$ARG" == "e2e" ]; then
+  echo "need 'bin/run' and 'webdriver-manager start' running"
+  echo "(enter to continue)"
+  read
+  protractor test/protractor.conf.js
+
+fi

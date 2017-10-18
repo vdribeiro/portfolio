@@ -1,0 +1,9 @@
+.DS_Store
+*.sublime-workspace
+node_modules/
+bower_components/
+coverage/
+tmp/
+dist/
+npm-debug.log
+.tern-project

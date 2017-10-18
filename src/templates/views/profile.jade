@@ -1,0 +1,139 @@
+section#profile_introduction
+  md-subheader.profile-introduction-header
+    span.md-display-1 Introduction
+  .profile-introduction(layout="column" layout-padding="")
+  
+    .profile-intro(layout="column")
+      span.md-subhead Hello,
+      span.md-title 
+        | I'm 
+        strong {{profile.name}}
+      span.md-subhead Software Developer
+    
+    .profile-info(layout="row")
+      .profile-details(layout="column")
+        .profile-info-detail(
+          layout="row"
+          ng-repeat="info in profile.info"
+        )
+          .profile-info-title 
+            b {{info.title}}
+          .profile-info-values(layout="column") 
+            .profile-info-value(
+              ng-repeat="value in info.values"
+            ) {{value}}
+          
+      img.profile(
+        ng-src="{{profile.img}}" 
+        height="260" 
+        width="260"
+      )
+    
+section#profile_experience
+  md-subheader.profile-experience-header
+    span.md-display-1 Experience
+  .profile-experience(layout="column" layout-padding="")
+    md-card(layout="column" ng-repeat="xp in experience")
+      .experience-content(layout="column")
+        span.md-headline.experience-company {{xp.company}}
+        span.md-subhead.experience-location {{xp.location}}
+        .experience-dates(layout="row")
+          .experience-date(ng-repeat="date in xp.dates")
+            span.md-subhead.experience-date {{date}}
+            span.md-subhead.experience-bar(ng-if="!isLastIndex(xp.dates, $index)") |
+        .experience-positions(layout="row")
+          .experience-position(ng-repeat="position in xp.positions")
+            span.md-title.experience-position-title {{position}}
+            span.md-title.experience-bar(ng-if="!isLastIndex(xp.positions, $index)") |
+        .experience-details(layout="row")
+          a(ng-href="{{xp.url}}" target="_blank")
+            img.experience(
+              ng-src='{{xp.img}}'
+              height="100" 
+              width="100"
+            )
+          .experience-bullets(layout="column")
+            .experience-bullet(
+              layout="row" 
+              layout-align="start center"
+              ng-repeat="bullet in xp.bullets"
+            )
+              i.material-icons chevron_right
+              span {{bullet}}
+    
+section#profile_technology
+  md-subheader.profile-technology-header
+    span.md-display-1 Technology
+  .profile-technology(layout="column" layout-padding="")
+    .tech-group(layout="column" ng-repeat="group in technology")
+      span.md-headline.tech-group-title {{group.title}}
+      .tech-group-details(layout="row")
+        md-card.tech-card(
+          ng-repeat="tech in group.values"
+          layout="column"
+        )
+          img.tech(ng-src='{{tech.img}}')
+          .tech-title(layout="row" layout-align="center end")
+            span.md-subhead.tech-title {{tech.title}}
+    
+section#profile_education
+  md-subheader.profile-education-header
+    span.md-display-1 Education
+  .profile-education(layout="column" layout-padding="")
+    md-card(layout="column" ng-repeat="edu in education")
+      .education-content(layout="column")
+        span.md-headline.education-institution {{edu.institution}}
+        span.md-subhead.education-location {{edu.location}}
+        .education-dates(layout="row")
+          .education-date(ng-repeat="date in edu.dates")
+            span.md-subhead.education-date {{date}}
+            span.md-subhead.education-bar(ng-if="!isLastIndex(edu.dates, $index)") |
+        .education-qualifications(layout="row")
+          .education-qualification(ng-repeat="qualification in edu.qualifications")
+            span.md-title.education-qualification-title {{qualification}}
+            span.md-title.education-bar(ng-if="!isLastIndex(edu.qualifications, $index)") |
+        .education-details(layout="row")
+          a(ng-href="{{edu.url}}" target="_blank")
+            img.education(
+              ng-src='{{edu.img}}'
+              height="100" 
+              width="100"
+            )
+          .education-bullets(layout="column")
+            .education-bullet(
+              layout="row" 
+              layout-align="start center"
+              ng-repeat="bullet in edu.bullets"
+            )
+              i.material-icons chevron_right
+              span {{bullet}}
+    
+section#profile_awards
+  md-subheader.profile-awards-header
+    span.md-display-1 Awards
+  .profile-awards(layout="row" layout-padding="")
+    md-card.award-card(ng-repeat="award in awards")
+      span.md-title.award-title(layout-padding="") {{award.title}}
+      img.award(
+        layout-padding=""
+        ng-src='{{award.img}}'
+        ng-click="showDialog($event, award.img)"
+      )
+      span.md-subhead.award-description(layout-padding="") {{award.description}}
+    
+section#profile_connect
+  md-subheader.profile-connect-header
+    span.md-display-1 Connect
+  .profile-connect(layout="column" layout-padding="")
+    md-list(flex="")
+      md-list-item(ng-repeat="con in connect")
+        a(
+          layout="row" 
+          layout-align="start center" 
+          ng-href="{{con.url}}" 
+          target="_blank"
+        )
+          img.md-avatar(ng-src='{{con.img}}')
+          .md-list-item-text(
+            flex=""
+          ) {{con.title}}

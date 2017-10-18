@@ -1,0 +1,8 @@
+{
+  "SERVER_URL": "http://engine.toflow.dev:3223/api/",
+  "SOCKET_URL": "http://engine.toflow.dev:3223/",
+  "WEBCLIENT_PORT": "3003",
+  "WEBCLIENT_URL": "http://docker.host:3003",
+  "WEBCLIENT_URL": "http://xflow-webclient.docker:3003",
+  "XFLOW_ENGINE_WS_SERVER": "",
+}

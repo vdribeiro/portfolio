@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+set -a
+
+# gulp build:min
+gulp clean
+gulp build:dev
+gulp
