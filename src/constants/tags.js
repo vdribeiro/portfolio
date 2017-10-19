@@ -141,22 +141,6 @@ angular.module('app')
     title : 'Amazon AWS',
     img   : '/assets/tags/aws.png',
   },
-  photoshop : {
-    title : 'Photoshop',
-    img   : '/assets/tags/ps.png',
-  },
-  threedsmax : {
-    title : '3ds Max',
-    img   : '/assets/tags/3dsmax.png',
-  },
-  coreldraw : {
-    title : 'CorelDRAW',
-    img   : '/assets/tags/coreldraw.png',
-  },
-  image_processing_toolbox : {
-    title : 'Image Processing Toolbox',
-    img   : '/assets/tags/image_processing_toolbox.png',
-  },
   node : {
     title : 'Node',
     img   : '/assets/tags/nodejs.png',
@@ -169,6 +153,10 @@ angular.module('app')
     title : 'Gulp',
     img   : '/assets/tags/gulp.png',
   },
+  opengl : {
+    title : 'OpenGL',
+    img   : '/assets/tags/opengl.png',
+  },
   circleci : {
     title : 'CircleCI',
     img   : '/assets/tags/circleci.png',
@@ -176,10 +164,6 @@ angular.module('app')
   cucumber : {
     title : 'Cucumber',
     img   : '/assets/tags/cucumber.png',
-  },
-  opengl : {
-    title : 'OpenGL',
-    img   : '/assets/tags/opengl.png',
   },
   artoolkit : {
     title : 'ARToolKit',
@@ -201,18 +185,6 @@ angular.module('app')
     title : 'Repast',
     img   : '/assets/tags/repast.png',
   },
-  nav : {
-    title : 'Microsoft Dynamics NAV',
-    img   : '/assets/tags/nav.png',
-  },
-  joomla : {
-    title : 'Joomla',
-    img   : '/assets/tags/joomla.png',
-  },
-  dokuwiki : {
-    title : 'DokuWiki',
-    img   : '/assets/tags/dokuwiki.png',
-  },
   apache : {
     title : 'Apache',
     img   : '/assets/tags/apache.png',
@@ -224,6 +196,46 @@ angular.module('app')
   mingw : {
     title : 'MinGW',
     img   : '/assets/tags/mingw.png',
+  },
+  image_processing_toolbox : {
+    title : 'Image Processing Toolbox',
+    img   : '/assets/tags/image_processing_toolbox.png',
+  },
+  photoshop : {
+    title : 'Photoshop',
+    img   : '/assets/tags/ps.png',
+  },
+  threedsmax : {
+    title : '3ds Max',
+    img   : '/assets/tags/3dsmax.png',
+  },
+  coreldraw : {
+    title : 'CorelDRAW',
+    img   : '/assets/tags/coreldraw.png',
+  },
+  joomla : {
+    title : 'Joomla',
+    img   : '/assets/tags/joomla.png',
+  },
+  dokuwiki : {
+    title : 'DokuWiki',
+    img   : '/assets/tags/dokuwiki.png',
+  },
+  nav : {
+    title : 'Microsoft Dynamics NAV',
+    img   : '/assets/tags/nav.png',
+  },
+  ms_visual_cpp : {
+    title : 'Microsoft Visual C++',
+    img   : '/assets/tags/ms_visual_cpp.png',
+  },
+  rest : {
+    title : 'REST',
+    img   : '/assets/tags/rest.png',
+  },
+  ftp : {
+    title : 'FTP',
+    img   : '/assets/tags/ftp.png',
   },
   android_studio : {
     title : 'Android Studio',
@@ -260,30 +272,6 @@ angular.module('app')
   turbo_pascal : {
     title : 'Turbo Pascal',
     img   : '/assets/tags/turbo_pascal.png',
-  },
-  ms_visual_cpp : {
-    title : 'Microsoft Visual C++',
-    img   : '/assets/tags/ms_visual_cpp.png',
-  },
-  rest : {
-    title : 'REST',
-    img   : '/assets/tags/rest.png',
-  },
-  ftp : {
-    title : 'FTP',
-    img   : '/assets/tags/ftp.png',
-  },
-  linux : {
-    title : 'Linux',
-    img   : '/assets/tags/linux.png',
-  },
-  bdd : {
-    title : 'Behavior-Driven Development',
-    img   : '/assets/tags/bdd.png',
-  },
-  erp : {
-    title : 'ERP',
-    img   : '/assets/tags/erp.png',
   },
   mobile : {
     title : 'Mobile',
@@ -324,6 +312,18 @@ angular.module('app')
   music : {
     title : 'Music',
     img   : '/assets/tags/music.png',
+  },
+  linux : {
+    title : 'Linux',
+    img   : '/assets/tags/linux.png',
+  },
+  bdd : {
+    title : 'Behavior-Driven Development',
+    img   : '/assets/tags/bdd.png',
+  },
+  erp : {
+    title : 'ERP',
+    img   : '/assets/tags/erp.png',
   },
   tourism : {
     title : 'Tourism',

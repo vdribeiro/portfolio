@@ -1,54 +1,57 @@
 section#projects(layout="column")
+  md-subheader.projects-introduction-header
+    span.md-display-1 Projects
+  .projects-list(layout="column" layout-padding="")
   
-  .tags-filter.md-padding.autocomplete(layout="column")
-    md-contact-chips(
-      ng-model="selectedTags"
-      md-contacts="querySearch($query)"
-      md-contact-name="title"
-      md-contact-image="img"
-      md-require-match="true"
-      md-highlight-flags="i"
-      filter-selected="true"
-      placeholder="Search a tag"
-    )
-    
-    md-list
-      md-subheader.md-no-sticky Tags
+    .tags-filter.md-padding.autocomplete(layout="column")
+      md-contact-chips(
+        ng-model="selectedTags"
+        md-contacts="querySearch($query)"
+        md-contact-name="title"
+        md-contact-image="img"
+        md-require-match="true"
+        md-highlight-flags="i"
+        filter-selected="true"
+        placeholder="Search a tag"
+      )
       
-      .tags-filtered
-        md-list-item.md-2-line.tag-item(
-          ng-repeat="(index, tag) in arrayTags"
-          ng-if="selectedTags.indexOf(tag) < 0"
-        )
-          img.md-avatar(ng-src="{{tag.img}}")
-          .md-list-item-text.compact
-            h3 {{tag.title}}
-            
-        md-list-item.md-2-line.tag-item.selected(
-          ng-repeat="(index, tag) in selectedTags"
-        )
-          img.md-avatar(ng-src="{{tag.img}}")
-          .md-list-item-text.compact
-            h3 {{tag.title}}
-  
-  md-card(layout="column" ng-repeat="project in projects")
-    .project-content(layout="column")
-      span.md-headline.project-title {{project.title}}
-      .project-details(layout="row")
-        a(ng-href="{{project.url}}" target="_blank")
-          img.project(ng-src="{{project.img}}")
-        .project-description(
-          layout="column"
-          layout-align="start center"
-        )
-          span {{project.description}}
-      .project-tag-divider
-        md-divider
-      .project-tags(layout="row")
-        .project-tag(ng-repeat="tag in project.tags")
-          img.tag(
-            ng-src="{{getTagImage(tag)}}"
-            height="30" 
-            width="30"
+      md-list
+        md-subheader.md-no-sticky Tags
+        
+        .tags-filtered
+          md-list-item.md-2-line.tag-item(
+            ng-repeat="(index, tag) in arrayTags"
+            ng-if="selectedTags.indexOf(tag) < 0"
           )
-          md-tooltip(md-direction="top") {{getTagName(tag)}}
+            img.md-avatar(ng-src="{{tag.img}}")
+            .md-list-item-text.compact
+              h3 {{tag.title}}
+              
+          md-list-item.md-2-line.tag-item.selected(
+            ng-repeat="(index, tag) in selectedTags"
+          )
+            img.md-avatar(ng-src="{{tag.img}}")
+            .md-list-item-text.compact
+              h3 {{tag.title}}
+    
+    md-card(layout="column" ng-repeat="project in projects")
+      .project-content(layout="column")
+        span.md-headline.project-title {{project.title}}
+        .project-details(layout="row")
+          a(ng-href="{{project.url}}" target="_blank")
+            img.project(ng-src="{{project.img}}")
+          .project-description(
+            layout="column"
+            layout-align="start center"
+          )
+            span {{project.description}}
+        .project-tag-divider
+          md-divider
+        .project-tags(layout="row")
+          .project-tag(ng-repeat="tag in project.tags")
+            img.tag(
+              ng-src="{{getTagImage(tag)}}"
+              height="30" 
+              width="30"
+            )
+            md-tooltip(md-direction="top") {{getTagName(tag)}}

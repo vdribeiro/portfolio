@@ -33,6 +33,7 @@ section#profile_experience
   md-subheader.profile-experience-header
     span.md-display-1 Experience
   .profile-experience(layout="column" layout-padding="")
+  
     md-card(layout="column" ng-repeat="xp in experience")
       .experience-content(layout="column")
         span.md-headline.experience-company {{xp.company}}
@@ -65,6 +66,7 @@ section#profile_technology
   md-subheader.profile-technology-header
     span.md-display-1 Technology
   .profile-technology(layout="column" layout-padding="")
+  
     .tech-group(layout="column" ng-repeat="group in technology")
       span.md-headline.tech-group-title {{group.title}}
       .tech-group-details(layout="row")
@@ -80,6 +82,7 @@ section#profile_education
   md-subheader.profile-education-header
     span.md-display-1 Education
   .profile-education(layout="column" layout-padding="")
+  
     md-card(layout="column" ng-repeat="edu in education")
       .education-content(layout="column")
         span.md-headline.education-institution {{edu.institution}}
@@ -112,6 +115,7 @@ section#profile_awards
   md-subheader.profile-awards-header
     span.md-display-1 Awards
   .profile-awards(layout="row" layout-padding="")
+  
     md-card.award-card(ng-repeat="award in awards")
       span.md-title.award-title(layout-padding="") {{award.title}}
       img.award(
@@ -125,6 +129,7 @@ section#profile_connect
   md-subheader.profile-connect-header
     span.md-display-1 Connect
   .profile-connect(layout="column" layout-padding="")
+  
     md-list(flex="")
       md-list-item(ng-repeat="con in connect")
         a(

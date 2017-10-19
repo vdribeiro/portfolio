@@ -1,6 +1,6 @@
 section#research
-  md-subheader
-    span.md-headline Introduction
+  md-subheader.research-introduction-header
+    span.md-display-1 Introduction
   .research_introduction(layout="column" layout-padding="")
   
     md-list(flex="")
@@ -9,9 +9,10 @@ section#research
           span(ng-repeat="text in research.description") {{text}}
   
 section#research_highlights
-  md-subheader
-    span.md-headline Highlights
+  md-subheader.research-highlights-header
+    span.md-display-1 Highlights
   .research_highlights(layout="column" layout-padding="")
+  
     md-list(flex="")
       md-list-item(
         ng-repeat="highlight in research.highlights"
@@ -24,9 +25,10 @@ section#research_highlights
         ) {{highlight}}
             
 section#research_links
-  md-subheader
-    span.md-headline Links
+  md-subheader.research-links-header
+    span.md-display-1 Links
   .research_links(layout="column" layout-padding="")
+  
     md-list(flex="")
       md-list-item(
         ng-repeat="link in research.links"

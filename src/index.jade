@@ -36,18 +36,20 @@ html(ng-app="app" ng-controller="RootController")
         md-whiteframe="4"
         layout="column"
       )
-        md-list(flex="")
+        md-list(flex="" layout-align="start center")
           md-list-item(
             ng-repeat-start="parent in menu.items"
             ng-click="menu.select($index, -1)"
             ng-class="{true: 'selected', false: null}[menu.isSelected($index, -1)]"
             layout-align="start center"
+            layout="row"
           ) 
             .md-list-item-text(flex="") {{parent.title}}
             
             .expand(
               ng-show="parent.children"
               layout-align="start center"
+              layout="row"
             )
               i.material-icons(ng-show="!parent.show") expand_more
               i.material-icons(ng-show="parent.show") expand_less
