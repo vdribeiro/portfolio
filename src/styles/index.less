@@ -252,10 +252,6 @@ img.project {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  box-sizing: border-box;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .tag-item, .tag-item-selected {
@@ -264,60 +260,8 @@ img.project {
   width: 250px;
 }
 
-// TODO
-// .chipsdemoContactChips {
-// 	md-content.autocomplete {
-// 		min-height: 250px;
-// 		input {
-// 			min-width: 400px;
-// 		}
-// 	}
-// 	.md-item-text.compact {
-// 		padding-top: 8px;
-// 		padding-bottom: 8px;
-// 	}
-// 	.contact-item {
-// 		box-sizing: border-box;
-// 		.md-list-item-text {
-// 			padding: 14px 0;
-// 			max-width: 190px;
-// 			h3 {
-// 				margin: 0 !important;
-// 				padding: 0;
-// 				line-height: 1.2em !important;
-// 				text-overflow: ellipsis;
-// 				white-space: nowrap;
-// 				overflow: hidden;
-// 			}
-// 			p {
-// 				text-overflow: ellipsis;
-// 				white-space: nowrap;
-// 				overflow: hidden;
-// 			}
-// 		}
-// 	}
-// 	.contact-item.selected {
-// 		opacity: 0.5;
-// 		h3 {
-// 			opacity: 0.5;
-// 		}
-// 	}
-// 	md-contact-chips {
-// 		margin-bottom: 10px;
-// 	}
-// 	.md-chips {
-// 		padding: 5px 0 8px;
-// 	}
-// 	.fixedRows {
-// 		height: 250px;
-// 		overflow: hidden;
-// 	}
-// }
-// @media (min-width: 960px) {
-// 	.chipsdemoContactChips {
-// 		.contact-item {
-// 			float: left;
-// 			width: 33%;
-// 		}
-// 	}
-// }
+.md-virtual-repeat-scroller {
+  min-width: 500px !important;
+  max-width: 500px !important;
+  width: 500px !important;
+}
