@@ -6,14 +6,14 @@ angular.module('app')
 		img   : '/assets/projects/portfolio.png',
 		tags  : [
 			'web',
-			'atom',
-			'javascript',
-			'angular',
 			'html5',
 			'pug',
 			'css3',
 			'less',
+			'javascript',
+			'angular',
 			'gulp',
+			'atom',
 		],
 		description : 'That\'s right, this website!'
 	},

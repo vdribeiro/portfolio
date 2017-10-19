@@ -97,6 +97,7 @@ angular.module('app')
 
     $scope.projects = PROJECTS
     $scope.tags = TAGS
+    $scope.arrayTags = _.values(TAGS)
 
     $scope.isLastIndex = isLastIndex
     $scope.showDialog = showDialog
@@ -107,5 +108,23 @@ angular.module('app')
 
     $timeout(function() { ScreenManager.showScreen() })
 
+    $scope.querySearch = querySearch
+    $scope.selectedTags = []
+
+    function querySearch (criteria) {
+
+      var filter = createFilterFor(criteria)
+
+      return criteria ? $scope.arrayTags.filter(filter) : []
+    }
+
+    function createFilterFor(query) {
+      var lowercaseQuery = angular.lowercase(query)
+
+      return function filterFn(tag) {
+        var lowercaseTag = angular.lowercase(tag.title)
+        return (lowercaseTag.indexOf(lowercaseQuery) != -1)
+      }
+    }
   }]
 )
