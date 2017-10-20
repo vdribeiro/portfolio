@@ -78,10 +78,7 @@ section#projects(layout="column")
         .project-details(layout="row")
           a(ng-href="{{project.url}}" target="_blank")
             img.project(ng-src="{{project.img}}")
-          .project-description(
-            layout="column"
-            layout-align="start center"
-          )
+          .project-description
             span {{project.description}}
         .project-tag-divider
           md-divider
