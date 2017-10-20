@@ -19,8 +19,20 @@ section#profile_introduction
         layout="row" 
         layout-padding=""
       )
-        .profile-image
+        .profile-image(
+          layout="column" 
+          layout-align="start center"
+        )
           img.profile(ng-src="{{profile.img}}")
+          .profile-cv
+            a(
+              href="/assets/profile/cv.pdf" 
+              target="_blank"
+              download=""
+              layout-fill=""
+            )
+              md-button.md-raised(layout-fill="") Download CV
+          
         .profile-details(layout="column")
           .profile-info-detail(
             layout="row"
