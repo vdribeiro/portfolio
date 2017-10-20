@@ -2,32 +2,38 @@ section#profile_introduction
   md-subheader.profile-introduction-header
     span.md-display-1 Introduction
   .profile-introduction(layout="column" layout-padding="")
-  
-    .profile-intro(layout="column")
-      span.md-subhead Hello,
-      span.md-title 
-        | I'm 
-        strong {{profile.name}}
-      span.md-subhead Software Developer
     
-    .profile-info(layout="row")
-      .profile-details(layout="column")
-        .profile-info-detail(
-          layout="row"
-          ng-repeat="info in profile.info"
-        )
-          .profile-info-title 
-            b {{info.title}}
-          .profile-info-values(layout="column") 
-            .profile-info-value(
-              ng-repeat="value in info.values"
-            ) {{value}}
-          
-      img.profile(
-        ng-src="{{profile.img}}" 
-        height="260" 
-        width="260"
+    md-card(layout="column")
+      .profile-intro(layout="column" layout-padding="")
+        .profile-greeting(layout="column")
+          span.md-subhead Hello,
+          span.md-title 
+            | I'm 
+            strong {{profile.name}}
+          span.md-subhead Software Developer
+      
+      .profile-divider
+        md-divider
+      
+      .profile-info(
+        layout="row" 
+        layout-padding=""
       )
+        .profile-image
+          img.profile(ng-src="{{profile.img}}")
+        .profile-details(layout="column")
+          .profile-info-detail(
+            layout="row"
+            ng-repeat="info in profile.info"
+          )
+            .profile-info-title 
+              b {{info.title}}
+            .profile-info-values(layout="column") 
+              .profile-info-value(
+                ng-repeat="value in info.values"
+              ) {{value}}
+            
+        
     
 section#profile_experience
   md-subheader.profile-experience-header
@@ -72,6 +78,7 @@ section#profile_technology
       .tech-group-details(layout="row")
         md-card.tech-card(
           ng-repeat="tech in group.values"
+          ng-if="!tech.deprecated"
           layout="column"
         )
           img.tech(ng-src='{{tech.img}}')

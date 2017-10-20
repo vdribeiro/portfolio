@@ -83,6 +83,22 @@ angular.module('app')
       return tag.img
     }
 
+    function querySearch(criteria) {
+
+      var filter = createFilterFor(criteria)
+
+      return criteria ? $scope.arrayTags.filter(filter) : []
+    }
+
+    function createFilterFor(query) {
+      var lowercaseQuery = angular.lowercase(query)
+
+      return function filterFn(tag) {
+        var lowercaseTag = angular.lowercase(tag.title)
+        return (lowercaseTag.indexOf(lowercaseQuery) != -1)
+      }
+    }
+
     $scope.screen = ScreenManager
     $scope.menu = MenuManager
 
@@ -99,32 +115,17 @@ angular.module('app')
     $scope.tags = TAGS
     $scope.arrayTags = _.values(TAGS)
 
+    $scope.selectedTags = []
+
     $scope.isLastIndex = isLastIndex
     $scope.showDialog = showDialog
     $scope.getTagName = getTagName
     $scope.getTagImage = getTagImage
+    $scope.querySearch = querySearch
 
     ScreenManager.watch($scope)
 
     $timeout(function() { ScreenManager.showScreen() })
 
-    $scope.querySearch = querySearch
-    $scope.selectedTags = []
-
-    function querySearch (criteria) {
-
-      var filter = createFilterFor(criteria)
-
-      return criteria ? $scope.arrayTags.filter(filter) : []
-    }
-
-    function createFilterFor(query) {
-      var lowercaseQuery = angular.lowercase(query)
-
-      return function filterFn(tag) {
-        var lowercaseTag = angular.lowercase(tag.title)
-        return (lowercaseTag.indexOf(lowercaseQuery) != -1)
-      }
-    }
   }]
 )

@@ -15,6 +15,7 @@ angular.module('app')
       {
         title : 'C',
         img   : '/assets/technology/c.png',
+        deprecated : true,
       },
       {
         title : 'C++',
@@ -35,14 +36,17 @@ angular.module('app')
       {
         title : 'Python',
         img   : '/assets/technology/python.png',
+        deprecated : true,
       },
       {
         title : 'PHP',
         img   : '/assets/technology/php.png',
+        deprecated : true,
       },
       {
         title : 'Ruby',
         img   : '/assets/technology/ruby.png',
+        deprecated : true,
       },
       {
         title : 'SQL',
@@ -51,26 +55,32 @@ angular.module('app')
       {
         title : 'Max',
         img   : '/assets/technology/max6.png',
+        deprecated : true,
       },
       {
         title : 'Visual Basic',
         img   : '/assets/technology/visual_basic.png',
+        deprecated : true,
       },
       {
         title : 'Visual Basic .NET',
         img   : '/assets/technology/visual_basic_net.png',
+        deprecated : true,
       },
       {
         title : 'Prolog',
         img   : '/assets/technology/prolog.png',
+        deprecated : true,
       },
       {
         title : 'R',
         img   : '/assets/technology/r.png',
+        deprecated : true,
       },
       {
         title : 'MATLAB',
         img   : '/assets/technology/matlab.png',
+        deprecated : true,
       },
       {
         title : 'Bash',
@@ -79,18 +89,22 @@ angular.module('app')
       {
         title : 'Pascal',
         img   : '/assets/technology/pascal.png',
+        deprecated : true,
       },
       {
         title : 'Assembly',
         img   : '/assets/technology/asm.png',
+        deprecated : true,
       },
       {
         title : 'VDM++',
         img   : '/assets/technology/vdmpp.png',
+        deprecated : true,
       },
       {
         title : 'Alloy',
         img   : '/assets/technology/alloy.png',
+        deprecated : true,
       },
     ]
   },
@@ -103,16 +117,23 @@ angular.module('app')
         img   : '/assets/technology/angular.png',
       },
       {
+        title : 'ARToolKit',
+        img   : '/assets/technology/artoolkit.png',
+      },
+      {
         title : 'jMusic',
         img   : '/assets/technology/jmusic.png',
+        deprecated : true,
       },
       {
         title : 'JADE',
         img   : '/assets/technology/jade.png',
+        deprecated : true,
       },
       {
         title : '.NET',
         img   : '/assets/technology/dotnet.png',
+        deprecated : true,
       },
     ]
   },
@@ -153,6 +174,75 @@ angular.module('app')
       {
         title : 'Oracle',
         img   : '/assets/technology/oracle.png',
+        deprecated : true,
+      },
+    ]
+  },
+
+  {
+    title : 'Tools',
+    values : [
+      {
+        title : 'Node',
+        img   : '/assets/technology/nodejs.png',
+      },
+      {
+        title : 'jQuery',
+        img   : '/assets/technology/jquery.png',
+        deprecated : true,
+      },
+      {
+        title : 'Gulp',
+        img   : '/assets/technology/gulp.png',
+      },
+      {
+        title : 'OpenGL',
+        img   : '/assets/technology/opengl.png',
+      },
+      {
+        title : 'Cucumber',
+        img   : '/assets/technology/cucumber.png',
+        deprecated : true,
+      },
+      {
+        title : 'AWT/Swing',
+        img   : '/assets/technology/awt_swing.png',
+        deprecated : true,
+      },
+      {
+        title : 'Jasmin',
+        img   : '/assets/technology/jasmin.png',
+        deprecated : true,
+      },
+      {
+        title : 'JavaCC',
+        img   : '/assets/technology/javacc.png',
+        deprecated : true,
+      },
+      {
+        title : 'Repast',
+        img   : '/assets/technology/repast.png',
+        deprecated : true,
+      },
+      {
+        title : 'Joomla',
+        img   : '/assets/technology/joomla.png',
+        deprecated : true,
+      },
+      {
+        title : 'DokuWiki',
+        img   : '/assets/technology/dokuwiki.png',
+        deprecated : true,
+      },
+      {
+        title : 'TinyXML',
+        img   : '/assets/technology/tinyxml.png',
+        deprecated : true,
+      },
+      {
+        title : 'MinGW',
+        img   : '/assets/technology/mingw.png',
+        deprecated : true,
       },
     ]
   },
@@ -165,12 +255,18 @@ angular.module('app')
         img   : '/assets/technology/ps.png',
       },
       {
+        title : 'Paint.NET',
+        img   : '/assets/technology/paintnet.png',
+      },
+      {
         title : '3ds Max',
         img   : '/assets/technology/3dsmax.png',
+        deprecated : true,
       },
       {
         title : 'CorelDRAW',
         img   : '/assets/technology/coreldraw.png',
+        deprecated : true,
       },
     ]
   },
@@ -189,6 +285,7 @@ angular.module('app')
       {
         title : 'Visual Studio',
         img   : '/assets/technology/visual_studio.png',
+        deprecated : true,
       },
       {
         title : 'Sublime',
@@ -201,81 +298,23 @@ angular.module('app')
       {
         title : 'Notepad++',
         img   : '/assets/technology/notepadpp.png',
+        deprecated : true,
       },
       {
         title : 'SWI-Prolog',
         img   : '/assets/technology/swi_prolog.png',
+        deprecated : true,
       },
       {
         title : 'SICStus',
         img   : '/assets/technology/sicstus.png',
+        deprecated : true,
       },
       {
         title : 'Turbo Pascal',
         img   : '/assets/technology/turbo_pascal.png',
+        deprecated : true,
       },
     ]
   },
-
-  {
-    title : 'Tools',
-    values : [
-      {
-        title : 'Node',
-        img   : '/assets/technology/nodejs.png',
-      },
-      {
-        title : 'Gulp',
-        img   : '/assets/technology/gulp.png',
-      },
-      {
-        title : 'CircleCI',
-        img   : '/assets/technology/circleci.png',
-      },
-      {
-        title : 'Cucumber',
-        img   : '/assets/technology/cucumber.png',
-      },
-      {
-        title : 'OpenGL',
-        img   : '/assets/technology/opengl.png',
-      },
-      {
-        title : 'ARToolKit',
-        img   : '/assets/technology/artoolkit.png',
-      },
-      {
-        title : 'AWT/Swing',
-        img   : '/assets/technology/awt_swing.png',
-      },
-      {
-        title : 'Jasmin',
-        img   : '/assets/technology/jasmin.png',
-      },
-      {
-        title : 'JavaCC',
-        img   : '/assets/technology/javacc.png',
-      },
-      {
-        title : 'Repast',
-        img   : '/assets/technology/repast.png',
-      },
-      {
-        title : 'Microsoft Dynamics NAV',
-        img   : '/assets/technology/nav.png',
-      },
-      {
-        title : 'Joomla',
-        img   : '/assets/technology/joomla.png',
-      },
-      {
-        title : 'TinyXML',
-        img   : '/assets/technology/tinyxml.png',
-      },
-      {
-        title : 'MinGW',
-        img   : '/assets/technology/mingw.png',
-      },
-    ]
-  }
 ])

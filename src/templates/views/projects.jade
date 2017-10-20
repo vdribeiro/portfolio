@@ -4,20 +4,54 @@ section#projects(layout="column")
   .projects-list(layout="column" layout-padding="")
   
     .tags-filter.md-padding.autocomplete(layout="column")
-      md-contact-chips(
+      md-chips(
         ng-model="selectedTags"
-        md-contacts="querySearch($query)"
-        md-contact-name="title"
-        md-contact-image="img"
+        md-autocomplete-snap="width"
+        md-transform-chip="transformChip($chip)"
         md-require-match="true"
-        md-highlight-flags="i"
-        filter-selected="true"
-        placeholder="Search a tag"
       )
+        md-autocomplete(
+          md-selected-item="selectedItem"
+          md-search-text="searchText"
+          md-items="tag in querySearch(searchText)"
+          md-item-text="tag.title"
+          placeholder="Search a tag"
+          secondary-placeholder="Search a tag"
+          md-menu-class="autocomplete-tag"
+        )
+          .tag-chip(layout="row" layout-align="start center")
+            img.md-avatar(
+              ng-src="{{tag.img}}"
+              width="40"
+              height="40"
+            )
+            span(md-highlight-text="searchText") {{tag.title}}
+              
+        md-chip-template
+          .tag-chip(layout="row" layout-align="start center")
+            .md-contact-avatar
+              img(
+                ng-src="{{tag.img}}"
+              )
+            .md-contact-name {{tag.title}}
       
-      md-list
-        md-subheader.md-no-sticky Tags
-        
+      //- md-contact-chips(
+      //-   ng-model="selectedTags"
+      //-   md-contacts="querySearch($query)"
+      //-   md-contact-name="title"
+      //-   md-contact-email="email"
+      //-   md-contact-image="img"
+      //-   md-require-match="true"
+      //-   md-highlight-flags="i"
+      //-   filter-selected="true"
+      //-   placeholder="Search a tag"
+      //-   md-menu-class="autocomplete-tag"
+      //-   md-autocomplete-snap="width"
+      //- )
+      
+      md-button.md-raised(ng-click="tagsVisible=!tagsVisible") button
+      
+      md-list(ng-show="tagsVisible")
         .tags-filtered
           md-list-item.md-2-line.tag-item(
             ng-repeat="(index, tag) in arrayTags"
@@ -34,7 +68,7 @@ section#projects(layout="column")
             .md-list-item-text.compact
               h3 {{tag.title}}
     
-    md-card(layout="column" ng-repeat="project in projects")
+    md-card(layout="column" ng-repeat="project in projects | filter:selectedTags")
       .project-content(layout="column")
         span.md-headline.project-title {{project.title}}
         .project-details(layout="row")

@@ -1,6 +1,8 @@
 angular.module('app')
 
 .constant('TAGS', {
+
+  // Languages
   android : {
     title : 'Android',
     img   : '/assets/tags/android.png',
@@ -89,13 +91,15 @@ angular.module('app')
     title : 'Alloy',
     img   : '/assets/tags/alloy.png',
   },
+
+  // Frameworks
   angular : {
     title : 'Angular',
     img   : '/assets/tags/angular.png',
   },
-  jquery : {
-    title : 'jQuery',
-    img   : '/assets/tags/jquery.png',
+  artoolkit : {
+    title : 'ARToolKit',
+    img   : '/assets/tags/artoolkit.png',
   },
   jmusic : {
     title : 'jMusic',
@@ -109,6 +113,8 @@ angular.module('app')
     title : '.NET',
     img   : '/assets/tags/dotnet.png',
   },
+
+  // Pre-Processors
   pug : {
     title : 'Pug',
     img   : '/assets/tags/pug.png',
@@ -117,6 +123,8 @@ angular.module('app')
     title : 'Less',
     img   : '/assets/tags/less.png',
   },
+
+  // Data
   redis : {
     title : 'Redis',
     img   : '/assets/tags/redis.png',
@@ -137,6 +145,8 @@ angular.module('app')
     title : 'Oracle',
     img   : '/assets/tags/oracle.png',
   },
+
+  // Tools
   aws : {
     title : 'Amazon AWS',
     img   : '/assets/tags/aws.png',
@@ -144,6 +154,10 @@ angular.module('app')
   node : {
     title : 'Node',
     img   : '/assets/tags/nodejs.png',
+  },
+  jquery : {
+    title : 'jQuery',
+    img   : '/assets/tags/jquery.png',
   },
   docker : {
     title : 'Docker',
@@ -164,10 +178,6 @@ angular.module('app')
   cucumber : {
     title : 'Cucumber',
     img   : '/assets/tags/cucumber.png',
-  },
-  artoolkit : {
-    title : 'ARToolKit',
-    img   : '/assets/tags/artoolkit.png',
   },
   awt_swing : {
     title : 'AWT/Swing',
@@ -193,25 +203,21 @@ angular.module('app')
     title : 'TinyXML',
     img   : '/assets/tags/tinyxml.png',
   },
+  json : {
+    title : 'JSON',
+    img   : '/assets/tags/json.png',
+  },
   mingw : {
     title : 'MinGW',
     img   : '/assets/tags/mingw.png',
   },
+  ms_visual_cpp : {
+    title : 'Microsoft Visual C++',
+    img   : '/assets/tags/ms_visual_cpp.png',
+  },
   image_processing_toolbox : {
     title : 'Image Processing Toolbox',
     img   : '/assets/tags/image_processing_toolbox.png',
-  },
-  photoshop : {
-    title : 'Photoshop',
-    img   : '/assets/tags/ps.png',
-  },
-  threedsmax : {
-    title : '3ds Max',
-    img   : '/assets/tags/3dsmax.png',
-  },
-  coreldraw : {
-    title : 'CorelDRAW',
-    img   : '/assets/tags/coreldraw.png',
   },
   joomla : {
     title : 'Joomla',
@@ -221,22 +227,34 @@ angular.module('app')
     title : 'DokuWiki',
     img   : '/assets/tags/dokuwiki.png',
   },
+  postman : {
+    title : 'Postman',
+    img   : '/assets/tags/postman.png',
+  },
   nav : {
     title : 'Microsoft Dynamics NAV',
     img   : '/assets/tags/nav.png',
   },
-  ms_visual_cpp : {
-    title : 'Microsoft Visual C++',
-    img   : '/assets/tags/ms_visual_cpp.png',
+
+  // Design
+  photoshop : {
+    title : 'Photoshop',
+    img   : '/assets/tags/ps.png',
   },
-  rest : {
-    title : 'REST',
-    img   : '/assets/tags/rest.png',
+  paintnet : {
+    title : 'Paint.NET',
+    img   : '/assets/tags/paintnet.png',
   },
-  ftp : {
-    title : 'FTP',
-    img   : '/assets/tags/ftp.png',
+  threedsmax : {
+    title : '3ds Max',
+    img   : '/assets/tags/3dsmax.png',
   },
+  coreldraw : {
+    title : 'CorelDRAW',
+    img   : '/assets/tags/coreldraw.png',
+  },
+
+  // Development Tools
   android_studio : {
     title : 'Android Studio',
     img   : '/assets/tags/android_studio.png',
@@ -272,6 +290,16 @@ angular.module('app')
   turbo_pascal : {
     title : 'Turbo Pascal',
     img   : '/assets/tags/turbo_pascal.png',
+  },
+
+  // Generic
+  rest : {
+    title : 'REST',
+    img   : '/assets/tags/rest.png',
+  },
+  ftp : {
+    title : 'FTP',
+    img   : '/assets/tags/ftp.png',
   },
   mobile : {
     title : 'Mobile',
@@ -312,6 +340,10 @@ angular.module('app')
   music : {
     title : 'Music',
     img   : '/assets/tags/music.png',
+  },
+  osm : {
+    title : 'Open Street Maps',
+    img   : '/assets/tags/osm.png',
   },
   linux : {
     title : 'Linux',

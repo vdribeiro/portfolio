@@ -48,7 +48,7 @@ section#profile_introduction {
 }
 
 .profile-introduction-header {
-  background-color: rgba(40,75,99,1.0);
+  background-color: rgba(47,89,117,1.0);
   color: rgba(255,255,255,0.87);
 }
 
@@ -89,11 +89,11 @@ section#profile_awards {
 }
 
 section#profile_connect {
-  background-color: rgba(237,209,112,1.0);
+  background-color: rgba(230,230,230,1.0);
 }
 
 .profile-connect-header {
-  background-color: rgba(237,209,112,1.0);
+  background-color: rgba(230,230,230,1.0);
   color: rgba(255,255,255,0.87);
 }
 
@@ -134,10 +134,13 @@ span.md-subhead.tech-title {
 }
 
 img.profile {
-  align-self: center;
-  margin-left: 16px;
-  border-radius: 2%;
-  border: 1px solid grey;
+  border-radius: 1%;
+  width: 260px;
+  max-width: 260px;
+  min-width: 50px;
+  height: 260px;
+  max-height: 260px;
+  min-height: 50px;
 }
 
 img.experience,
@@ -146,31 +149,30 @@ img.education {
 }
 
 img.tech {
-  align-self: center;
   min-width: 100px;
 }
 
 img.award {
-  align-self: center;
   cursor: pointer;
 }
 
 img.project {
-  align-self: center;
   border-radius: 1%;
   max-width: 320px;
   min-width: 100px;
 }
 
-.profile-intro {
-  padding-top: 8px;
-  padding-bottom: 16px;
+.profile-divider {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.profile-info {
-  border-top: 2px solid rgba(0,0,0,0.12);
-  padding-top: 24px;
-  padding-bottom: 32px;
+.profile-image {
+  padding-top: 16px;
+}
+
+.profile-details {
+  padding-top: 16px;
 }
 
 .profile-info-title {
@@ -188,7 +190,7 @@ img.project {
   padding-left: 16px;
   width: 70%;
   text-align: left;
-  border-left: 2px solid rgba(0,0,0,0.12);
+  border-left: 1px solid rgba(0,0,0,0.12);
 }
 
 .experience-bar,
@@ -260,9 +262,21 @@ img.project {
   width: 200px;
 }
 
-//TODO
-.md-virtual-repeat-scroller {
-  min-width: 500px !important;
-  max-width: 500px !important;
-  width: 500px !important;
-}
+// .md-chips {
+// 	.md-chip-input-container {
+// 		md-autocomplete {
+// 			input {
+//         white-space: nowrap !important;
+//         overflow: visible !important;
+//         text-overflow: clip !important;
+// 				width: 400px !important;
+// 			}
+// 		}
+// 	}
+// }
+
+// .ng-move,
+// .ng-enter,
+// .ng-leave {
+//   transition:all linear 0.5s;
+// }
