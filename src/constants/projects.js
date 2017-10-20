@@ -476,8 +476,7 @@ angular.module('app')
 		img   : '/assets/projects/optilote.png',
 		tags  : [
 			'java',
-			'swing',
-			'awt',
+			'awt_swing',
 			'eclipse',
 			'ai',
 		],
