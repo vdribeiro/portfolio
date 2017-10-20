@@ -2,71 +2,75 @@ section#projects(layout="column")
   md-subheader.projects-introduction-header
     span.md-display-1 Projects
   .projects-list(layout="column" layout-padding="")
-  
-    .tags-filter.md-padding.autocomplete(layout="column")
-      md-chips(
-        ng-model="selectedTags"
-        md-autocomplete-snap="width"
-        md-transform-chip="transformChip($chip)"
-        md-require-match="true"
-      )
-        md-autocomplete(
-          md-selected-item="selectedItem"
-          md-search-text="searchText"
-          md-items="tag in querySearch(searchText)"
-          md-item-text="tag.title"
-          placeholder="Search a tag"
-          secondary-placeholder="Search a tag"
-          md-menu-class="autocomplete-tag"
+    
+    md-card(layout="column")
+      .tags-filter.md-padding.autocomplete(layout="column")
+        md-chips(
+          ng-model="selectedTags"
+          md-autocomplete-snap="width"
+          md-transform-chip="transformChip($chip)"
+          md-require-match="true"
         )
-          .tag-chip(layout="row" layout-align="start center")
-            img.md-avatar(
-              ng-src="{{tag.img}}"
-              width="40"
-              height="40"
-            )
-            span(md-highlight-text="searchText") {{tag.title}}
-              
-        md-chip-template
-          .tag-chip(layout="row" layout-align="start center")
-            .md-contact-avatar
-              img(
+          md-autocomplete(
+            md-selected-item="selectedItem"
+            md-search-text="searchText"
+            md-items="tag in querySearch(searchText)"
+            md-item-text="tag.title"
+            placeholder="Search for tags"
+            secondary-placeholder="Search a tag"
+            md-menu-class="autocomplete-tag"
+          )
+            .tag-chip(layout="row" layout-align="start center")
+              img.md-avatar(
                 ng-src="{{tag.img}}"
+                width="40"
+                height="40"
               )
-            .md-contact-name {{tag.title}}
-      
-      //- md-contact-chips(
-      //-   ng-model="selectedTags"
-      //-   md-contacts="querySearch($query)"
-      //-   md-contact-name="title"
-      //-   md-contact-email="email"
-      //-   md-contact-image="img"
-      //-   md-require-match="true"
-      //-   md-highlight-flags="i"
-      //-   filter-selected="true"
-      //-   placeholder="Search a tag"
-      //-   md-menu-class="autocomplete-tag"
-      //-   md-autocomplete-snap="width"
-      //- )
-      
-      md-button.md-raised(ng-click="tagsVisible=!tagsVisible") button
-      
-      md-list(ng-show="tagsVisible")
-        .tags-filtered
-          md-list-item.md-2-line.tag-item(
-            ng-repeat="(index, tag) in arrayTags"
-            ng-if="selectedTags.indexOf(tag) < 0"
-          )
-            img.md-avatar(ng-src="{{tag.img}}")
-            .md-list-item-text.compact
-              h3 {{tag.title}}
-              
-          md-list-item.md-2-line.tag-item.selected(
-            ng-repeat="(index, tag) in selectedTags"
-          )
-            img.md-avatar(ng-src="{{tag.img}}")
-            .md-list-item-text.compact
-              h3 {{tag.title}}
+              span(md-highlight-text="searchText") {{tag.title}}
+                
+          md-chip-template
+            .tag-chip(layout="row" layout-align="start center")
+              .md-contact-avatar
+                img(
+                  ng-src="{{tag.img}}"
+                )
+              .md-contact-name {{tag.title}}
+        
+        //- md-contact-chips(
+        //-   ng-model="selectedTags"
+        //-   md-contacts="querySearch($query)"
+        //-   md-contact-name="title"
+        //-   md-contact-email="email"
+        //-   md-contact-image="img"
+        //-   md-require-match="true"
+        //-   md-highlight-flags="i"
+        //-   filter-selected="true"
+        //-   placeholder="Search a tag"
+        //-   md-menu-class="autocomplete-tag"
+        //-   md-autocomplete-snap="width"
+        //- )
+        
+        .tags-check
+          md-checkbox(
+            ng-model='tagsVisible'
+          ) Show Tags
+        
+        md-list(ng-show="tagsVisible")
+          .tags-filtered
+            md-list-item.md-2-line.tag-item(
+              ng-repeat="(index, tag) in arrayTags"
+              ng-if="selectedTags.indexOf(tag) < 0"
+            )
+              img.md-avatar(ng-src="{{tag.img}}")
+              .md-list-item-text.compact
+                h3 {{tag.title}}
+                
+            md-list-item.md-2-line.tag-item.selected(
+              ng-repeat="(index, tag) in selectedTags"
+            )
+              img.md-avatar(ng-src="{{tag.img}}")
+              .md-list-item-text.compact
+                h3 {{tag.title}}
     
     md-card(layout="column" ng-repeat="project in projects | filter:selectedTags")
       .project-content(layout="column")

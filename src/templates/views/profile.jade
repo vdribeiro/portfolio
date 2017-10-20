@@ -73,13 +73,19 @@ section#profile_technology
     span.md-display-1 Technology
   .profile-technology(layout="column" layout-padding="")
   
+    .tech-check
+      md-checkbox(
+        ng-model='showDeprecated'
+      ) Show past technologies
+
     .tech-group(layout="column" ng-repeat="group in technology")
       span.md-headline.tech-group-title {{group.title}}
       .tech-group-details(layout="row")
         md-card.tech-card(
-          ng-repeat="tech in group.values"
-          ng-if="!tech.deprecated"
           layout="column"
+          ng-repeat="tech in group.values"
+          ng-if="!tech.deprecated || showDeprecated"
+          ng-class="{true: 'deprecated', false: null}[tech.deprecated]"
         )
           img.tech(ng-src='{{tech.img}}')
           .tech-title(layout="row" layout-align="center end")

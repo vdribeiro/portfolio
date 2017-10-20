@@ -13,11 +13,6 @@ angular.module('app')
         img   : '/assets/technology/java.png',
       },
       {
-        title : 'C',
-        img   : '/assets/technology/c.png',
-        deprecated : true,
-      },
-      {
         title : 'C++',
         img   : '/assets/technology/cpp.png',
       },
@@ -34,6 +29,19 @@ angular.module('app')
         img   : '/assets/technology/js.png',
       },
       {
+        title : 'SQL',
+        img   : '/assets/technology/sql.png',
+      },
+      {
+        title : 'Bash',
+        img   : '/assets/technology/bash.png',
+      },
+      {
+        title : 'C',
+        img   : '/assets/technology/c.png',
+        deprecated : true,
+      },
+      {
         title : 'Python',
         img   : '/assets/technology/python.png',
         deprecated : true,
@@ -47,10 +55,6 @@ angular.module('app')
         title : 'Ruby',
         img   : '/assets/technology/ruby.png',
         deprecated : true,
-      },
-      {
-        title : 'SQL',
-        img   : '/assets/technology/sql.png',
       },
       {
         title : 'Max',
@@ -81,10 +85,6 @@ angular.module('app')
         title : 'MATLAB',
         img   : '/assets/technology/matlab.png',
         deprecated : true,
-      },
-      {
-        title : 'Bash',
-        img   : '/assets/technology/bash.png',
       },
       {
         title : 'Pascal',
@@ -119,6 +119,7 @@ angular.module('app')
       {
         title : 'ARToolKit',
         img   : '/assets/technology/artoolkit.png',
+        deprecated : true,
       },
       {
         title : 'jMusic',
@@ -187,17 +188,18 @@ angular.module('app')
         img   : '/assets/technology/nodejs.png',
       },
       {
-        title : 'jQuery',
-        img   : '/assets/technology/jquery.png',
-        deprecated : true,
-      },
-      {
         title : 'Gulp',
         img   : '/assets/technology/gulp.png',
       },
       {
         title : 'OpenGL',
         img   : '/assets/technology/opengl.png',
+        deprecated : true,
+      },
+      {
+        title : 'jQuery',
+        img   : '/assets/technology/jquery.png',
+        deprecated : true,
       },
       {
         title : 'Cucumber',
@@ -283,17 +285,17 @@ angular.module('app')
         img   : '/assets/technology/eclipse.png',
       },
       {
-        title : 'Visual Studio',
-        img   : '/assets/technology/visual_studio.png',
-        deprecated : true,
-      },
-      {
         title : 'Sublime',
         img   : '/assets/technology/sublime.png',
       },
       {
         title : 'Atom',
         img   : '/assets/technology/atom.png',
+      },
+      {
+        title : 'Visual Studio',
+        img   : '/assets/technology/visual_studio.png',
+        deprecated : true,
       },
       {
         title : 'Notepad++',
