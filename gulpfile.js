@@ -162,4 +162,4 @@ gulp.task('tdd', function(done) {
 })
 
 // DEFAULT
-gulp.task('default', ['start', 'build', 'post-process', 'minify'])
+gulp.task('default', ['start', 'build', 'post-process'])

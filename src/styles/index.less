@@ -134,6 +134,10 @@ span.md-subhead.tech-title {
   padding-top: 8px;
 }
 
+span.tag {
+  padding-left: 8px;
+}
+
 img.profile {
   border-radius: 1%;
   width: 250px;
@@ -144,6 +148,12 @@ img.profile {
 img.experience,
 img.education {
   border-radius: 2%;
+  width: 100px;
+  max-width: 100px;
+  min-width: 100px;
+  height: 100px;
+  max-height: 100px;
+  min-height: 100px;
 }
 
 img.tech {
@@ -154,11 +164,29 @@ img.award {
   cursor: pointer;
 }
 
+img.tag-chip {
+  width: 40px;
+  max-width: 40px;
+  min-width: 40px;
+  height: 40px;
+  max-height: 40px;
+  min-height: 40px;
+}
+
 img.project {
   border-radius: 1%;
   width: 250px;
   max-width: 250px;
   min-width: 250px;
+}
+
+img.tag {
+  width: 30px;
+  max-width: 30px;
+  min-width: 30px;
+  height: 30px;
+  max-height: 30px;
+  min-height: 30px;
 }
 
 .profile-divider {
@@ -167,7 +195,8 @@ img.project {
 }
 
 .profile-image,
-.profile-details {
+.profile-details,
+.tags-check {
   padding-top: 16px;
 }
 
@@ -276,22 +305,3 @@ img.project {
   width: 640px;
   text-align: justify;
 }
-
-// .md-chips {
-// 	.md-chip-input-container {
-// 		md-autocomplete {
-// 			input {
-//         white-space: nowrap !important;
-//         overflow: visible !important;
-//         text-overflow: clip !important;
-// 				width: 400px !important;
-// 			}
-// 		}
-// 	}
-// }
-
-// .ng-move,
-// .ng-enter,
-// .ng-leave {
-//   transition:all linear 0.5s;
-// }

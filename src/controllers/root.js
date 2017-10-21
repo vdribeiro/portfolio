@@ -1,11 +1,6 @@
 angular.module('app')
 
 .controller('RootController', [
-  '$scope',
-  '$timeout',
-  '$mdDialog',
-  'ScreenManager',
-  'MenuManager',
   'PROFILE',
   'EXPERIENCE',
   'TECHNOLOGY',
@@ -13,14 +8,13 @@ angular.module('app')
   'AWARDS',
   'CONNECT',
   'RESEARCH',
-  'PROJECTS',
-  'TAGS',
+  '$scope',
+  '$timeout',
+  '$mdDialog',
+  'ScreenManager',
+  'MenuManager',
+  'ProjectManager',
   function(
-    $scope,
-    $timeout,
-    $mdDialog,
-    ScreenManager,
-    MenuManager,
     PROFILE,
     EXPERIENCE,
     TECHNOLOGY,
@@ -28,8 +22,12 @@ angular.module('app')
     AWARDS,
     CONNECT,
     RESEARCH,
-    PROJECTS,
-    TAGS
+    $scope,
+    $timeout,
+    $mdDialog,
+    ScreenManager,
+    MenuManager,
+    ProjectManager
   ) {
 
     console.info('Client Build <GULP_BUILD_DATE>')
@@ -49,9 +47,7 @@ angular.module('app')
         targetEvent: ev,
         clickOutsideToClose: true,
         escapeToClose: true,
-        template: '<md-dialog ng-class="dialog.css">' +
-          '<md-dialog-content role="document" tabindex="-1" class="md-dialog-content">' +
-          '<img layout-fill ng-src="{{image}}" class="award"/></md-dialog-content></md-dialog>',
+        template: '<md-dialog ng-class="dialog.css"><md-dialog-content role="document" tabindex="-1" class="md-dialog-content"><img layout-fill ng-src="{{image}}" class="award"/></md-dialog-content></md-dialog>',
         locals: {
           image: image,
         },
@@ -67,61 +63,20 @@ angular.module('app')
       })
     }
 
-    function getTagName(key) {
-
-      var tag = TAGS[key]
-      if (_.isNil(tag)) return null
-
-      return tag.title
-    }
-
-    function getTagImage(key) {
-
-      var tag = TAGS[key]
-      if (_.isNil(tag)) return null
-
-      return tag.img
-    }
-
-    function querySearch(criteria) {
-
-      var filter = createFilterFor(criteria)
-
-      return criteria ? $scope.arrayTags.filter(filter) : []
-    }
-
-    function createFilterFor(query) {
-      var lowercaseQuery = angular.lowercase(query)
-
-      return function filterFn(tag) {
-        var lowercaseTag = angular.lowercase(tag.title)
-        return (lowercaseTag.indexOf(lowercaseQuery) != -1)
-      }
-    }
-
-    $scope.screen = ScreenManager
-    $scope.menu = MenuManager
-
     $scope.profile = PROFILE
     $scope.experience = EXPERIENCE
     $scope.technology = TECHNOLOGY
     $scope.education = EDUCATION
     $scope.awards = AWARDS
     $scope.connect = CONNECT
-
     $scope.research = RESEARCH
 
-    $scope.projects = PROJECTS
-    $scope.tags = TAGS
-    $scope.arrayTags = _.values(TAGS)
-
-    $scope.selectedTags = []
+    $scope.screen = ScreenManager
+    $scope.menu = MenuManager
+    $scope.project = ProjectManager
 
     $scope.isLastIndex = isLastIndex
     $scope.showDialog = showDialog
-    $scope.getTagName = getTagName
-    $scope.getTagImage = getTagImage
-    $scope.querySearch = querySearch
 
     ScreenManager.watch($scope)
 

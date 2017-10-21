@@ -397,9 +397,9 @@ angular.module('app')
     title : 'Automatic Generation of Music',
     img   : '/assets/tags/agm.png',
   },
-  so_shell : {
-    title : 'SO Shell',
-    img   : '/assets/tags/so_shell.png',
+  os_shell : {
+    title : 'OS Shell',
+    img   : '/assets/tags/shell.png',
   },
   computer_vision : {
     title : 'Computer Vision',

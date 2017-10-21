@@ -70,19 +70,16 @@ html(ng-app="app" ng-controller="RootController")
       
         .profile(
           ng-if="menu.selected.parent==0"
-          ng-show="menu.isReady"
         )
           include /views/profile
           
         .research(
           ng-if="menu.selected.parent==1"
-          ng-show="menu.isReady"
         )
           include /views/research
         
         .projects(
           ng-if="menu.selected.parent==2"
-          ng-show="menu.isReady"
         )
           include /views/projects
 

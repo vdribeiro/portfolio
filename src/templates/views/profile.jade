@@ -66,11 +66,7 @@ section#profile_experience
             span.md-title.experience-bar(ng-if="!isLastIndex(xp.positions, $index)") |
         .experience-details(layout="row")
           a(ng-href="{{xp.url}}" target="_blank")
-            img.experience(
-              ng-src='{{xp.img}}'
-              height="100" 
-              width="100"
-            )
+            img.experience(ng-src='{{xp.img}}')
           .experience-bullets(layout="column")
             .experience-bullet(
               layout="row" 
@@ -122,11 +118,7 @@ section#profile_education
             span.md-title.education-bar(ng-if="!isLastIndex(edu.qualifications, $index)") |
         .education-details(layout="row")
           a(ng-href="{{edu.url}}" target="_blank")
-            img.education(
-              ng-src='{{edu.img}}'
-              height="100" 
-              width="100"
-            )
+            img.education(ng-src='{{edu.img}}')
           .education-bullets(layout="column")
             .education-bullet(
               layout="row" 

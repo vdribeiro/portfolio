@@ -101,6 +101,7 @@ angular.module('app')
 			'sqlite',
 			'postgresql',
 			'mysql',
+			'json',
 			'eclipse',
 			'mobile',
 			'web',
@@ -513,7 +514,7 @@ angular.module('app')
 			'visual_studio',
 			'os',
 			'linux',
-			'so_shell',
+			'os_shell',
 		],
 		description : 'Simple command interpreter called SOSH that acts as a shell (OS Shell) with the capability to communicate with an application which analyses and calculates letter frequency, thus having a client-server relationship between the two applications capable of dealing with conflict situations when accessing shared resources. It lets you create new processes with multiple threads and perform inter-communication through named pipes, use signals as a mechanism for communication and synchronization avoiding conflicts between competing entities by consulting an information array system.'
 	},
