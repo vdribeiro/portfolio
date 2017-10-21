@@ -31,8 +31,8 @@ section#projects(layout="column")
                 
           md-chip-template
             .tag-chip(layout="row" layout-align="start center")
-              img.tag-chip(ng-src="{{tag.img}}")
-              span.tag {{tag.title}}
+              img.tag(ng-src="{{$chip.img}}")
+              span.tag {{$chip.title}}
         
         .tags-check
           md-checkbox(
@@ -45,16 +45,16 @@ section#projects(layout="column")
               ng-repeat="tag in project.tags"
               ng-if="project.isTagSelected(tag)"
             )
-              img.md-avatar(ng-src="{{tag.img}}")
-              .md-list-item-text.compact
-                h3 {{tag.title}}
+              .tag-chip(layout="row" layout-align="start center")
+                img.tag(ng-src="{{tag.img}}")
+                span.tag {{tag.title}}
                 
             md-list-item.md-2-line.tag-item.selected(
               ng-repeat="tag in project.selectedTags"
             )
-              img.md-avatar(ng-src="{{tag.img}}")
-              .md-list-item-text.compact
-                h3 {{tag.title}}
+              .tag-chip(layout="row" layout-align="start center")
+                img.tag(ng-src="{{tag.img}}")
+                span.tag {{tag.title}}
     
     md-card(layout="column" ng-repeat="proj in project.getProjects()")
       .project-content(layout="column")

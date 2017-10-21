@@ -164,15 +164,6 @@ img.award {
   cursor: pointer;
 }
 
-img.tag-chip {
-  width: 40px;
-  max-width: 40px;
-  min-width: 40px;
-  height: 40px;
-  max-height: 40px;
-  min-height: 40px;
-}
-
 img.project {
   border-radius: 1%;
   width: 250px;
@@ -296,9 +287,12 @@ img.tag {
 }
 
 .tag-item, .tag-item-selected {
-  min-width: 200px;
-  max-width: 200px;
-  width: 200px;
+  min-width: 300px;
+  max-width: 300px;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .project-description {

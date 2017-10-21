@@ -82,7 +82,6 @@ angular.module('app')
         if (_.isNil(tag)) return
 
         if (self.selectedTags.indexOf(tag) > -1) {
-          console.log(tag)
           count++
         }
       })
