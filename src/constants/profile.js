@@ -26,7 +26,6 @@ angular.module('app')
       title : 'Titles',
       values : [
         'Engineer',
-        'Thinker',
         'Musician',
       ]
     },
