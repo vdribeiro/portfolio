@@ -8,7 +8,7 @@ angular.module('app')
   'AWARDS',
   'CONNECT',
   'RESEARCH',
-  '$scope',
+  '$rootScope',
   '$timeout',
   '$mdDialog',
   'ScreenManager',
@@ -22,7 +22,7 @@ angular.module('app')
     AWARDS,
     CONNECT,
     RESEARCH,
-    $scope,
+    $rootScope,
     $timeout,
     $mdDialog,
     ScreenManager,
@@ -58,29 +58,35 @@ angular.module('app')
             $scope,
             image
           ) {
-            $scope.image = image
+            $rootScope.image = image
           }]
       })
     }
 
-    $scope.profile = PROFILE
-    $scope.experience = EXPERIENCE
-    $scope.technology = TECHNOLOGY
-    $scope.education = EDUCATION
-    $scope.awards = AWARDS
-    $scope.connect = CONNECT
-    $scope.research = RESEARCH
+    $rootScope.profile = PROFILE
+    $rootScope.experience = EXPERIENCE
+    $rootScope.technology = TECHNOLOGY
+    $rootScope.education = EDUCATION
+    $rootScope.awards = AWARDS
+    $rootScope.connect = CONNECT
+    $rootScope.research = RESEARCH
 
-    $scope.screen = ScreenManager
-    $scope.menu = MenuManager
-    $scope.project = ProjectManager
+    $rootScope.screen = ScreenManager
+    $rootScope.menu = MenuManager
+    $rootScope.project = ProjectManager
 
-    $scope.isLastIndex = isLastIndex
-    $scope.showDialog = showDialog
+    $rootScope.isLastIndex = isLastIndex
+    $rootScope.showDialog = showDialog
 
-    ScreenManager.watch($scope)
+    ScreenManager.watch($rootScope)
 
     $timeout(function() { ScreenManager.showScreen() })
+
+    $rootScope.$on('$routeChangeSuccess', function () {
+      $timeout(function () {
+        $window.scrollTo(0,0)
+      }, 500)
+    })
 
   }]
 )

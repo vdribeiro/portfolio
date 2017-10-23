@@ -12,8 +12,6 @@ angular.module('app')
 
     function MenuManager() {
 
-      this.isReady = true
-
       this.items = [
         {
           title    : 'Profile',
@@ -36,68 +34,54 @@ angular.module('app')
       ]
 
       this.selected = {
-        parent : 0,
-        child  : 0
+        parent : 'Profile',
+        child  : 'Introduction'
       }
-    }
-
-    MenuManager.prototype.scrollTo = function(hash) {
-      var self = this
-
-      $timeout(function() {
-        $location.hash(hash)
-        $anchorScroll()
-        $location.hash(null)
-        self.isReady = true
-      })
-    }
-
-    MenuManager.prototype.change = function(hash, parent, child) {
-
-      // TODO - this.isReady = false
-
-      this.selected.parent = parent
-      this.selected.child = child
-
-      this.scrollTo(hash)
     }
 
     MenuManager.prototype.select = function(parent, child) {
 
-      var menu = this.items[parent]
-      if (_.isNil(menu)) return
+      var path = _.replace(_.lowerCase(parent.title), ' ', '_')
+      var hash = path
 
-      var hash = _.replace(_.lowerCase(menu.title), ' ', '_')
+      this.selected.parent = parent.title
+      this.selected.child = null
 
-      if (_.isNil(menu.children)) {
-        this.change(hash,parent, -1)
-        return
+      if (!_.isNil(child)) {
+
+        hash = path + '_' + _.replace(_.lowerCase(child), ' ', '_')
+        this.selected.child = child
+      } else if (!_.isNil(parent.children)) {
+
+        parent.show = !parent.show
       }
 
-      if (child < 0) {
-        menu.show = !menu.show
-        return
-      }
-
-      var item = menu.children[child]
-      if (_.isNil(item)) return
-
-      hash = hash + '_' + _.replace(_.lowerCase(item), ' ', '_')
-
-      this.change(hash, parent, child)
+      this.goTo(path, hash)
     }
 
     MenuManager.prototype.isSelected = function(parent, child) {
 
-      var menu = this.items[parent]
+      if (_.isNil(parent.children)) {
 
-      if (_.isNil(menu)) return false
-
-      if (menu.children) {
-        return this.selected.parent == parent && this.selected.child == child
+        return this.selected.parent === parent.title
       }
 
-      return this.selected.parent == parent
+      return this.selected.parent === parent.title && this.selected.child === child
+    }
+
+    MenuManager.prototype.goTo = function(path, hash) {
+      var self = this
+      $location.path(path)
+
+      $timeout(function() {
+
+        $location.hash(hash)
+        $anchorScroll()
+        if (path === hash) {
+          $location.hash(null)
+        }
+
+      })
     }
 
     return new MenuManager()

@@ -28,7 +28,7 @@ html(ng-app="app" ng-controller="RootController")
           i.material-icons menu
         span(flex="", md-truncate="") Vitor Ribeiro
         
-    .app(layout="row")
+    #app(layout="row")
     
       md-sidenav.md-sidenav-left(
         md-component-id="sidebar"
@@ -39,8 +39,8 @@ html(ng-app="app" ng-controller="RootController")
         md-list(flex="" layout-align="start center")
           md-list-item(
             ng-repeat-start="parent in menu.items"
-            ng-click="menu.select($index, -1)"
-            ng-class="{true: 'selected', false: null}[menu.isSelected($index, -1)]"
+            ng-click="menu.select(parent, null)"
+            ng-class="{true: 'selected', false: null}[menu.isSelected(parent, null)]"
             layout-align="start center"
             layout="row"
           ) 
@@ -58,8 +58,8 @@ html(ng-app="app" ng-controller="RootController")
             ng-show="parent.show"
             ng-repeat-end=""
             ng-repeat="child in parent.children"
-            ng-click="menu.select($parent.$index, $index)"
-            ng-class="{true: 'selected', false: null}[menu.isSelected($parent.$index, $index)]"
+            ng-click="menu.select(parent, child)"
+            ng-class="{true: 'selected', false: null}[menu.isSelected(parent, child)]"
           )
             .md-list-item-text(
               flex=""
@@ -67,20 +67,6 @@ html(ng-app="app" ng-controller="RootController")
             ) {{child}}
 
       md-content.main(flex="")
-      
-        .profile(
-          ng-if="menu.selected.parent==0"
-        )
-          include /views/profile
-          
-        .research(
-          ng-if="menu.selected.parent==1"
-        )
-          include /views/research
-        
-        .projects(
-          ng-if="menu.selected.parent==2"
-        )
-          include /views/projects
+        ng-view
 
   include /includes/scripts

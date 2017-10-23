@@ -32,7 +32,6 @@ gulp.task('watch', ['webserver'], function() {
   gulp.watch(paths.jade, ['concat', 'adapt-websockets-url'])
   gulp.watch(paths.less, ['styles'])
   return gulp.src(['./dist/index.js'])
-    // .pipe($.replace('<WS_SERVER>', process.env.WS_SERVER))
     .pipe(gulp.dest('./dist'))
 })
 
@@ -50,17 +49,17 @@ gulp.task('jade', function() {
     .pipe(gulp.dest('./tmp'))
 })
 
+gulp.task('templates', ['jade'], function() {
+  return gulp.src(['./tmp/templates/**/*.html', '!./tmp/templates/includes/**'])
+    .pipe($.angularTemplatecache({ standalone: true }))
+    .pipe(gulp.dest('./tmp'))
+})
+
 gulp.task('less', function() {
   return gulp.src(paths.less)
     .pipe(plumber())
     .pipe($.less())
     .pipe(gulp.dest('./tmp'))
-})
-
-gulp.task('templates', ['jade'], function() {
-  return gulp.src(['./tmp/templates/**/*.html', '!./tmp/templates/includes/**'])
-    .pipe($.angularTemplatecache({ standalone: true }))
-    .pipe(gulp.dest('./tmp')) // outputs templates.js
 })
 
 gulp.task('styles', ['less'], function() {
@@ -72,6 +71,11 @@ gulp.task('styles', ['less'], function() {
 gulp.task('assets', function() {
   return gulp.src(['./src/assets/**', './src/assets/**/*'])
     .pipe(gulp.dest('./dist/assets'))
+})
+
+gulp.task('html', function() {
+  return gulp.src(['./tmp/views/**', './temp/views/**/*'])
+    .pipe(gulp.dest('./dist/views'))
 })
 
 gulp.task('concat', ['templates'], function() {
@@ -91,21 +95,21 @@ gulp.task('concat', ['templates'], function() {
     .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('build', ['jade', 'less', 'templates', 'styles', 'assets', 'concat'])
+gulp.task('build', ['jade', 'less', 'templates', 'styles', 'assets', 'html', 'concat'])
 
 // POST PROCESS
 gulp.task('prepend-static-url', ['concat', 'styles'], function() {
 
   return gulp.src(['./dist/index.html', './dist/index.js'])
-    // .pipe($.replace('index.css', process.env.WEBCLIENT_URL + '/index.css'))
-    // .pipe($.replace('index.js',  process.env.WEBCLIENT_URL + '/index.js'))
+    // .pipe($.replace('index.css', WEBCLIENT_URL + '/index.css'))
+    // .pipe($.replace('index.js',  WEBCLIENT_URL + '/index.js'))
     .pipe($.replace('<GULP_BUILD_DATE>',  Date().toString()))
     .pipe(gulp.dest('./dist'))
 })
 
 gulp.task('adapt-websockets-url', ['prepend-static-url'], function() {
   return gulp.src(['./dist/index.js'])
-    // .pipe($.replace('<WS_SERVER>', process.env.WS_SERVER))
+    // .pipe($.replace('<WS_SERVER>', WS_SERVER))
     .pipe(gulp.dest('./dist'))
 })
 
