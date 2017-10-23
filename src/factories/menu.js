@@ -80,7 +80,6 @@ angular.module('app')
         if (path === hash) {
           $location.hash(null)
         }
-
       })
     }
 

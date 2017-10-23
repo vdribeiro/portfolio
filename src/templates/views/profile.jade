@@ -57,11 +57,11 @@ section#profile_experience
         .experience-dates(layout="row")
           .experience-date(ng-repeat="date in xp.dates")
             span.md-subhead.experience-date {{date}}
-            span.md-subhead.experience-bar(ng-if="!isLastIndex(xp.dates, $index)") |
+            span.md-subhead.experience-bar(ng-if="!utils.isLastIndex(xp.dates, $index)") |
         .experience-positions(layout="row")
           .experience-position(ng-repeat="position in xp.positions")
             span.md-title.experience-position-title {{position}}
-            span.md-title.experience-bar(ng-if="!isLastIndex(xp.positions, $index)") |
+            span.md-title.experience-bar(ng-if="!utils.isLastIndex(xp.positions, $index)") |
         .experience-details(layout="row")
           a(ng-href="{{xp.url}}" target="_blank")
             img.experience(ng-src='{{xp.img}}')
@@ -109,11 +109,11 @@ section#profile_education
         .education-dates(layout="row")
           .education-date(ng-repeat="date in edu.dates")
             span.md-subhead.education-date {{date}}
-            span.md-subhead.education-bar(ng-if="!isLastIndex(edu.dates, $index)") |
+            span.md-subhead.education-bar(ng-if="!utils.isLastIndex(edu.dates, $index)") |
         .education-qualifications(layout="row")
           .education-qualification(ng-repeat="qualification in edu.qualifications")
             span.md-title.education-qualification-title {{qualification}}
-            span.md-title.education-bar(ng-if="!isLastIndex(edu.qualifications, $index)") |
+            span.md-title.education-bar(ng-if="!utils.isLastIndex(edu.qualifications, $index)") |
         .education-details(layout="row")
           a(ng-href="{{edu.url}}" target="_blank")
             img.education(ng-src='{{edu.img}}')
@@ -136,7 +136,7 @@ section#profile_awards
       img.award(
         layout-padding=""
         ng-src='{{award.img}}'
-        ng-click="showDialog($event, award.img)"
+        ng-click="utils.showDialog($event, award.img)"
       )
       span.md-subhead.award-description(layout-padding="") {{award.description}}
     

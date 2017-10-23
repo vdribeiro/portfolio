@@ -67,6 +67,10 @@ html(ng-app="app" ng-controller="RootController")
             ) {{child}}
 
       md-content.main(flex="")
-        ng-view
+        .route.view(
+          ng-view=""
+          ng-class="{true: 'loading', false: null}[isLoading]"
+          ng-show="!isLoading"
+        )
 
   include /includes/scripts
