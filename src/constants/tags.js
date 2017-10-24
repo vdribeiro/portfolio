@@ -322,7 +322,7 @@ angular.module('app')
     img   : '/assets/tags/ai.png',
   },
   agents_dai : {
-    title : 'Agents and Distributed Artificial Intelligence',
+    title : 'Agents and Distributed AI',
     img   : '/assets/tags/agents_dai.png',
   },
   electronic_business : {

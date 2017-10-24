@@ -28,8 +28,6 @@ angular.module('app')
     ProjectManager
   ) {
 
-    console.info('Client Build <GULP_BUILD_DATE>')
-
     $rootScope.profile = PROFILE
     $rootScope.experience = EXPERIENCE
     $rootScope.technology = TECHNOLOGY
@@ -42,10 +40,9 @@ angular.module('app')
     $rootScope.menu = MenuManager
     $rootScope.project = ProjectManager
 
-    $timeout(function() {
-      MenuManager.watch($rootScope)
-      MenuManager.showScreen()
-    })
+    MenuManager.watch($rootScope)
+
+    $timeout(function() { MenuManager.showScreen() })
 
   }]
 )

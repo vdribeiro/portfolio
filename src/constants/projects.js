@@ -2,23 +2,6 @@ angular.module('app')
 
 .constant('PROJECTS', [
 	{
-		title : 'Portfolio',
-		img   : '/assets/projects/portfolio.png',
-		tags  : [
-			'html5',
-			'css3',
-			'javascript',
-			'angular',
-			'pug',
-			'less',
-			'gulp',
-			'paintnet',
-			'atom',
-			'web',
-		],
-		description : 'That\'s right, this website!'
-	},
-	{
 		title : 'Willows',
 		img   : '/assets/projects/willows.png',
 		tags  : [
@@ -30,7 +13,9 @@ angular.module('app')
 			'rest',
 			'mobile',
 		],
-		description : 'Platform for the Willows Pre-School group that promotes an easier and closer relationship between teachers and parents.'
+		description : [
+			'Platform for the Willows Pre-School group that promotes an easier and closer relationship between teachers and parents.'
+		]
 	},
 	{
 		title : 'toFlow',
@@ -56,7 +41,9 @@ angular.module('app')
 			'ai',
 			'rest',
 		],
-		description : 'An Innovative solution for real-time generation of integrated platforms.'
+		description : [
+			'An Innovative solution for real-time generation of integrated platforms.'
+		]
 	},
 	{
 		title : 'Farol City Guides',
@@ -72,7 +59,10 @@ angular.module('app')
 			'osm',
 			'tourism',
 		],
-		description : 'Farol is a multi-language offline travel guide for short city-break travellers with interactive maps of all the European capitals and other major cities, and high quality, up-to-date contents, which include points of interest, metro lines and more. It also enables the creation of automatic daytrips based on the user’s preferences and available time. This project was made in a European Space Agency incubated company, LatitudeN GmbH. More can be found at Farol World.'
+		description : [
+			'Farol is a multi-language offline travel guide for short city-break travellers with interactive maps of all the European capitals and other major cities, and high quality, up-to-date contents, which include points of interest, metro lines and more.',
+			'It also enables the creation of automatic daytrips based on the user’s preferences and available time. This project was made in a European Space Agency incubated company, LatitudeN GmbH. More can be found at Farol World.'
+		]
 	},
 	{
 		title : 'Berkovitsa-Godech',
@@ -88,7 +78,28 @@ angular.module('app')
 			'osm',
 			'tourism',
 		],
-		description : 'Berkovitsa-Godech is a travel guide dedicated to the Bulgarian region of the same name. It was commissioned by the Berkovitsa Municipality. It also provides an interactive OSM offline map with historical and demographic region information and up-to-date content.'
+		description : [
+			'Berkovitsa-Godech is a travel guide dedicated to the Bulgarian region of the same name. It was commissioned by the Berkovitsa Municipality. It also provides an interactive OSM offline map with historical and demographic region information and up-to-date content.'
+		]
+	},
+	{
+		title : 'Portfolio',
+		img   : '/assets/profile/vitor.png',
+		tags  : [
+			'html5',
+			'css3',
+			'javascript',
+			'angular',
+			'pug',
+			'less',
+			'gulp',
+			'paintnet',
+			'atom',
+			'web',
+		],
+		description : [
+			'That\'s right, this website!'
+		]
 	},
 	{
 		title : 'SenseMyCity Framework',
@@ -107,7 +118,11 @@ angular.module('app')
 			'web',
 			'data_mining',
 		],
-		description : 'The Future Cities Project is a FP7 funded project focused on the concept of future city as an urban environment centered on human needs, while exploiting the massive use of ICT embedded in the city fabric. The SenseMyCity framework consists of an infrastructure for simplified collection of geo-indexed data sensed using mobile devices, along with a pool of users willing to participate in experiments and the logistic support for city-wide experiments. The technical infrastructure consists of: a mobile framework to gather data from the device\'s available sensors; a server to process the data and store it in a database; a webpage to consult information in a user friendly way.\nThis framework is capable of handling a myriad sensors. Learn more at http://cloud.futurecities.up.pt/sensemycity/.'
+		description : [
+			'The Future Cities Project is a FP7 funded project focused on the concept of future city as an urban environment centered on human needs, while exploiting the massive use of ICT embedded in the city fabric. The SenseMyCity framework consists of an infrastructure for simplified collection of geo-indexed data sensed using mobile devices, along with a pool of users willing to participate in experiments and the logistic support for city-wide experiments.',
+			'The technical infrastructure consists of: a mobile framework to gather data from the device\'s available sensors; a server to process the data and store it in a database; a webpage to consult information in a user friendly way.',
+			'This framework is capable of handling a myriad sensors. Learn more at http://cloud.futurecities.up.pt/sensemycity/.'
+		]
 	},
 	{
 		title : 'SenseMyCity',
@@ -124,7 +139,10 @@ angular.module('app')
 			'web',
 			'data_mining',
 		],
-		description : 'SenseMyCity is the application generated by the framework that shares the same name. With this application, designed to use in research projects in various areas such as engineering and psychology, users can record, consciously and voluntarily, their daily routine through sensors embedded in their mobile phones, then view it on a web page created for that purpose. The collection and analysis of such data can lead to some conclusions regarding the consumption of fuel per journey, identifying areas with slower traffic, places or situations that increase stress levels of drivers, among others. This same analysis can be used to optimize routes and consumption, meaning that the use of SenseMyCity allows, for example, the identification of people with similar mobility patterns (boosting car sharing and carpooling) and map the city suggesting bike routes with little slope and flat floor. This application can also be used for the analysis of pooled data from several users enabling longitudinal studies of occupational stress which integrate questionnaires and vital sensors and can be applied to fire-fighters, bus drivers, or the police. The application SenseMyCity was developed under the Future Cities project and was designed to work in conjunction with other data collection projects and not alone and will always have a conscious and voluntary aspect by the user.'
+		description : [
+			'SenseMyCity is the application generated by the framework that shares the same name. With this application, designed to use in research projects in various areas such as engineering and psychology, users can record, consciously and voluntarily, their daily routine through sensors embedded in their mobile phones, then view it on a web page created for that purpose. The collection and analysis of such data can lead to some conclusions regarding the consumption of fuel per journey, identifying areas with slower traffic, places or situations that increase stress levels of drivers, among others. This same analysis can be used to optimize routes and consumption, meaning that the use of SenseMyCity allows, for example, the identification of people with similar mobility patterns (boosting car sharing and carpooling) and map the city suggesting bike routes with little slope and flat floor.',
+			'This application can also be used for the analysis of pooled data from several users enabling longitudinal studies of occupational stress which integrate questionnaires and vital sensors and can be applied to fire-fighters, bus drivers, or the police. The application SenseMyCity was developed under the Future Cities project and was designed to work in conjunction with other data collection projects and not alone and will always have a conscious and voluntary aspect by the user.'
+		]
 	},
 	{
 		title : 'MyDrivingDroid',
@@ -141,7 +159,9 @@ angular.module('app')
 			'web',
 			'data_mining',
 		],
-		description : 'Mobility is a major aspect of modern life, as one of the greatest contributors to the personal carbon footprint and to the pollution and noise in urban areas. Still, not enough information is available to quantize these factors in personal (e.g. impact of each trip) or urban scale (e.g. periods of highest pollution levels), or to relate them to geographic locations (e.g. areas most exposed to CO2 emissions). The goal of the MyDrivingDroid project is to provide trip information, such as travel duration, the overall energy costs and carbon emissions, the areas of excessive traffic, among others. It is intended that users share this information using this platform in a collaborative environment. The application logs the smartphone’s embedded sensor data, and uses an external device known as an On-Board Diagnostics device, to gather vehicle data. The data is then used to develop a model that estimates the instantaneous fuel consumption, and consequently CO2 emissions, from the smartphone GPS data alone. The availability of this data will empower users to track more closely their emission record, hence make more conscious decisions about their personal mobility. Moreover, aggregating the data from multiple users into an urban scale perspective can provide finer grained indicators to urban planning.'
+		description : [
+			'Mobility is a major aspect of modern life, as one of the greatest contributors to the personal carbon footprint and to the pollution and noise in urban areas. Still, not enough information is available to quantize these factors in personal (e.g. impact of each trip) or urban scale (e.g. periods of highest pollution levels), or to relate them to geographic locations (e.g. areas most exposed to CO2 emissions).',
+			'The goal of the MyDrivingDroid project is to provide trip information, such as travel duration, the overall energy costs and carbon emissions, the areas of excessive traffic, among others. It is intended that users share this information using this platform in a collaborative environment. The application logs the smartphone’s embedded sensor data, and uses an external device known as an On-Board Diagnostics device, to gather vehicle data. The data is then used to develop a model that estimates the instantaneous fuel consumption, and consequently CO2 emissions, from the smartphone GPS data alone. The availability of this data will empower users to track more closely their emission record, hence make more conscious decisions about their personal mobility. Moreover, aggregating the data from multiple users into an urban scale perspective can provide finer grained indicators to urban planning.']
 	},
 	{
 		title : 'Scope',
@@ -158,7 +178,10 @@ angular.module('app')
 			'web',
 			'data_mining',
 		],
-		description : 'Police work is one of the most stressful occupations and the exposure of police officers to stress sources over time has been associated with several physical, psychological and behavioral problems. The aim of the Scope project is to investigate psychological and physiological impact of stress among police officers working in real world conditions, by analysing gathered data using a smartphone and a Vital Jacket. The smartphone collects psychological measures of stress, coping, and georeferenced data in a transparent way, and police officers are required to press a button when experiencing a stressful event and respond to simple questions (voice or written). Scope provides a stress management solution, developing the health and well-being of police officers, and increasing the safeguard of the overall community. It also contributes to the area of stress and coping ambulatory assessment.'
+		description : [
+			'Police work is one of the most stressful occupations and the exposure of police officers to stress sources over time has been associated with several physical, psychological and behavioral problems. The aim of the Scope project is to investigate psychological and physiological impact of stress among police officers working in real world conditions, by analysing gathered data using a smartphone and a Vital Jacket. The smartphone collects psychological measures of stress, coping, and georeferenced data in a transparent way, and police officers are required to press a button when experiencing a stressful event and respond to simple questions (voice or written).',
+			'Scope provides a stress management solution, developing the health and well-being of police officers, and increasing the safeguard of the overall community. It also contributes to the area of stress and coping ambulatory assessment.'
+		]
 	},
 	{
 		title : 'Vital Responder 2',
@@ -175,7 +198,10 @@ angular.module('app')
 			'web',
 			'data_mining',
 		],
-		description : 'Monitoring Stress among First Responder professionals is a CMU-Portugal funded project with the main goal to provide secure, reliable and effective first-response systems in critical emergency scenarios. The goal of the Vital Responder research project is to explore the synergies between innovative wearable technologies, scattered sensor networks, intelligent building technology and precise localization services to provide secure, reliable and effective first-response systems in critical emergency scenarios. The Vital Responder 2 application aims at evaluating human stress in real-time under adverse conditions, by means of continuous online vital sign monitoring of first responders. The Vital Jackets are provided by a high-tech company named Biodevices, which together with researchers at the University of Aveiro developed this non-intrusive wearable technology, as inconspicuous as a t-shirt, capable of gathering relevant information about the individual. Researchers at IT, University of Porto and Carnegie Mellon collaborated in viewing Vital Jackets as nodes of a distributed system that leverages the rich data sets with short-range communication, intelligent building technologies and localization capabilities. Ultimately the team will deploy a prototype infrastructure that enables continuous online monitoring of the collected information. Companies like McLaren Electronics and Petratex are also involved in the project.'
+		description : [
+			'Monitoring Stress among First Responder professionals is a CMU-Portugal funded project with the main goal to provide secure, reliable and effective first-response systems in critical emergency scenarios. The goal of the Vital Responder research project is to explore the synergies between innovative wearable technologies, scattered sensor networks, intelligent building technology and precise localization services to provide secure, reliable and effective first-response systems in critical emergency scenarios. The Vital Responder 2 application aims at evaluating human stress in real-time under adverse conditions, by means of continuous online vital sign monitoring of first responders.',
+			'The Vital Jackets are provided by a high-tech company named Biodevices, which together with researchers at the University of Aveiro developed this non-intrusive wearable technology, as inconspicuous as a t-shirt, capable of gathering relevant information about the individual. Researchers at IT, University of Porto and Carnegie Mellon collaborated in viewing Vital Jackets as nodes of a distributed system that leverages the rich data sets with short-range communication, intelligent building technologies and localization capabilities. Ultimately the team will deploy a prototype infrastructure that enables continuous online monitoring of the collected information. Companies like McLaren Electronics and Petratex are also involved in the project.'
+		]
 	},
 	{
 		title : 'MoodSensor',
@@ -192,7 +218,9 @@ angular.module('app')
 			'web',
 			'data_mining',
 		],
-		description : 'MoodSensor is a project whose objectives are to map the happiness of citizens and characterize factors that influence it, namely mobility and environmental parameters. The app collects participants\' data and send them over WiFi to a cloud server where they are stored for processing. The tool is fully managed by the UP team, and only each participant has access to their own data.'
+		description : [
+			'MoodSensor is a project whose objectives are to map the happiness of citizens and characterize factors that influence it, namely mobility and environmental parameters. The app collects participants\' data and send them over WiFi to a cloud server where they are stored for processing. The tool is fully managed by the UP team, and only each participant has access to their own data.'
+		]
 	},
 	{
 		title : 'SCP',
@@ -208,7 +236,37 @@ angular.module('app')
 			'web',
 			'data_mining',
 		],
-		description : 'The SCP collects the raw data that is processed and tagged with stress classification. This information includes speech recordings (WAV files), along with annotation of the metadata and physiological sensor data. The application itself is not a single program, but an implementation of a client-server architecture where a netbook computer, on which the main program is run, acts as the server, and a smartphone acts as the client. The smartphone runs a program that collects the physiological sensor data and relays it to the server via a wireless (ad hoc) LAN. The result of each collection workflow is a sample file structure, where the questionnaire XML, the audio WAV, and the annotation XML files are stored and ready for processing by the next steps of the project. The physiological sensors are placed according to their specifications on the subject, switched on manually, and connect via Bluetooth to the smartphone. The application detects and connects to this devices, along with connecting to the serve app and relays timely updates to the server for visual monitoring (i.e. to assess if the information is being well received), but the whole sensor data is sequentially stored in the smartphone. At the end of the first and third (last) recording steps, these files are sent to the server for aggregation with the rest of the information (audio and subject/event details).'
+		description : [
+			'The SCP collects the raw data that is processed and tagged with stress classification. This information includes speech recordings (WAV files), along with annotation of the metadata and physiological sensor data. The application itself is not a single program, but an implementation of a client-server architecture where a computer, on which the main program is run, acts as the server, and a smartphone acts as the client. The smartphone runs a program that collects the physiological sensor data and relays it to the server via a wireless (ad hoc) LAN. The result of each collection workflow is a sample file structure, where the questionnaire XML, the audio WAV, and the annotation XML files are stored and ready for processing by the next steps of the project.',
+			'The physiological sensors are placed according to their specifications on the subject, switched on manually, and connect via Bluetooth to the smartphone. The application detects and connects to this devices, along with connecting to the serve app and relays timely updates to the server for visual monitoring (i.e. to assess if the information is being well received), but the whole sensor data is sequentially stored in the smartphone. At the end of the first and third (last) recording steps, these files are sent to the server for aggregation with the rest of the information (audio and subject/event details).'
+		]
+	},
+	{
+		title : 'Induflex',
+		img   : '/assets/projects/induflex.png',
+		tags  : [
+			'php',
+			'joomla',
+			'web',
+		],
+		description : [
+			'Induflex is a company dedicated to the upholstered furniture industry in Avintes, Portugal. After working a few summers in this company as a Computer Technician and Consultant, I also collaborated in the development of their website that I strongly recommend to consult.'
+		]
+	},
+	{
+		title : 'ARMotion',
+		img   : '/assets/projects/armotion.png',
+		tags  : [
+			'java',
+			'c',
+			'artoolkit',
+			'jmusic',
+			'music',
+		],
+		description : [
+			'Project that allows a user to play music by means of hand movement in the air. Various known algorithms are provided that allow the automatic generation of music such as genetic, drunk walk, Mozart\'s dice game, sinusoidal melody, cellular automata, fractals, among many others.',
+			'The user allocates one track of the music to one hand and chooses the type of instrument that plays it. You can allocate a second on the other hand. Intended to imitate the movements of a maestro, as the vertical movements of the right hand set the pace and circular movements play the notes.'
+		]
 	},
 	{
 		title : 'ListIt',
@@ -221,7 +279,9 @@ angular.module('app')
 			'eclipse',
 			'mobile',
 		],
-		description : 'Project for Tlantic responsible for Continente Online. What this project proposes is a new way to accelerate the purchasing process, taking advantage of the growth of mobile technologies and thus enabling the construction of shopping lists to facilitate the subsequent processes in e-commerce stores, as well as to assist the process of physical purchasing. The great advantage of this application is the ability to share lists and the fact that it provides an API for retailers who want to advertise their products in catalogs, properly filtered with user preferences through a heuristic.'
+		description : [
+			'Project for Tlantic responsible for Continente Online. What this project proposes is a new way to accelerate the purchasing process, taking advantage of the growth of mobile technologies and thus enabling the construction of shopping lists to facilitate the subsequent processes in e-commerce stores, as well as to assist the process of physical purchasing. The great advantage of this application is the ability to share lists and the fact that it provides an API for retailers who want to advertise their products in catalogs, properly filtered with user preferences through a heuristic.'
+		]
 	},
 	{
 		title : 'EventWide',
@@ -236,37 +296,9 @@ angular.module('app')
 			'mobile',
 			'web',
 		],
-		description : 'Application whose purpose is to share events keeping an Oracle database and using Google Calendar. The implementation consists of three modules: business partners, customers and administrators. Business partners, after being registered, create or update events (bars, furniture fairs, festivals, nightclubs, etc.) that are kept on a server. Customers consult the events on the server. Lastly the administrator app is intended for server maintenance.'
-	},
-	{
-		title : 'Speak2Me',
-		img   : '/assets/projects/s2me.png',
-		tags  : [
-			'mobile',
-			's2s',
-		],
-		description : 'Due to an interest in accessibility related problems, it was decided to create a service and a product that could benefit a social group unfortunately \'excluded\' from society: the hearing impaired. The project consists of an application for mobile devices that shows conversations detected by the mobile device in text balloons pointing to the source of the sound. The signal processing is performed by a server, so the application requires the internet to be always active. This is called speech-to-text. It also has the inverse component text-to-speech so that an individual with hearing disability can answer properly. In the end, the application would be a Speech-to-Speech and a communication bridge besides gestual language.\nHowever, the project was halted at the time for technological and economic viability reasons, as advanced techniques of sound triangulation and a very expensive infrastructure was needed.'
-	},
-	{
-		title : 'iTest',
-		img   : '/assets/projects/itest.png',
-		tags  : [
-			'ruby',
-			'cucumber',
-			'web',
-			'bdd',
-		],
-		description : 'BDD (Behavior Driven Development) Web platform to test projects that are submitted by registered users. In addition to the projects, it is possible to suggest features and comment submissions. Works as a Project Manager but with a surprise. The great advantage of the site is the fact that the client can perform the tests without having to understand programming. Tests can be written in plain text obeying certain \'keywords\' and the site does the rest, informing the user if the test is valid and if it passed.'
-	},
-	{
-		title : 'Induflex',
-		img   : '/assets/projects/induflex.png',
-		tags  : [
-			'php',
-			'joomla',
-			'web',
-		],
-		description : 'Induflex is a company dedicated to the upholstered furniture industry in Avintes, Portugal. After working a few summers in this company as a Computer Technician, I also collaborated in the development of their website that I strongly recommend to consult.'
+		description : [
+			'Application whose purpose is to share events keeping an Oracle database and using Google Calendar. The implementation consists of three modules: business partners, customers and administrators. Business partners, after being registered, create or update events (bars, furniture fairs, festivals, nightclubs, etc.) that are kept on a server. Customers consult the events on the server. Lastly the administrator app is intended for server maintenance.'
+		]
 	},
 	{
 		title : 'WikiBooks',
@@ -278,7 +310,49 @@ angular.module('app')
 			'eclipse',
 			'web',
 		],
-		description : 'DokuWiki plugin in PHP whose goal is to facilitate the consultation of books in this Wiki. Allows adding, editing and removal of an entire book library structure (books, publications, chapters, pages, etc.) and export to pdf its various elements. Users can also review these various elements and through a comparison module find similarities between them.'
+		description : [
+			'DokuWiki plugin in PHP whose goal is to facilitate the consultation of books in this Wiki. Allows adding, editing and removal of an entire book library structure (books, publications, chapters, pages, etc.) and export to pdf its various elements. Users can also review these various elements and through a comparison module find similarities between them.'
+		]
+	},
+	{
+		title : 'OptiLote',
+		img   : '/assets/projects/optilote.png',
+		tags  : [
+			'java',
+			'awt_swing',
+			'eclipse',
+			'ai',
+		],
+		description : [
+			'Program that uses a genetic algorithm and aims at solving the problem of optimizing the best locations of multiple clinics or hospitals in a city. It was done with an interface in Java Swing and AWT. Is it possible to edit all parameters, such as the city map and the costs and frequency of visits associated with buildings and the genetic algorithm\'s parameters, such as the stopping criteria or mutation probabilities.'
+		]
+	},
+	{
+		title : 'Dutch Auction',
+		img   : '/assets/projects/dutch.png',
+		tags  : [
+			'java',
+			'jade',
+			'eclipse',
+			'ai',
+			'electronic_business',
+		],
+		description : [
+			'Application that simulates the behaviour of a Dutch Auction with multiple agents in Jade. There are stockbrokers who put their products for sale and buyers who list the products they want to buy. According to the protocol of the Dutch auction, the price of a certain product slowly decreases until a buyer accepts it.'
+		]
+	},
+	{
+		title : 'iTest',
+		img   : '/assets/projects/itest.png',
+		tags  : [
+			'ruby',
+			'cucumber',
+			'web',
+			'bdd',
+		],
+		description : [
+			'BDD (Behavior Driven Development) Web platform to test projects that are submitted by registered users. In addition to the projects, it is possible to suggest features and comment submissions. Works as a Project Manager but with a surprise. The great advantage of the site is the fact that the client can perform the tests without having to understand programming. Tests can be written in plain text obeying certain \'keywords\' and the site does the rest, informing the user if the test is valid and if it passed.'
+		]
 	},
 	{
 		title : 'Web Of Developers',
@@ -290,51 +364,9 @@ angular.module('app')
 			'web',
 			'project_manager',
 		],
-		description : 'Website named Web of Developers to assist website developers. It works as a project manager. Registered users can submit their works and documents and share ideas. Includes a Forum for users to expose and discuss the themes they find convenient.'
-	},
-	{
-		title : 'Data Link Protocol',
-		img   : '/assets/projects/dlproto.png',
-		tags  : [
-			'c',
-			'visual_studio',
-			'web',
-			'linux',
-			'networks',
-		],
-		description : 'Data transmission application implemented complying with a connection protocol. All code is implemented in C, and uses asynchronous data transmission in the serial ports. The operating system that is intended is Linux, and elements of the Linux system are triggered.'
-	},
-	{
-		title : 'FTP Application',
-		img   : '/assets/projects/ftp.png',
-		tags  : [
-			'c',
-			'visual_studio',
-			'ftp',
-			'web',
-			'linux',
-			'networks',
-		],
-		description : 'FTP client based application that allows you to control file transfer between two FTP servers, navigate the local machine and remote servers as well as perform query operations, creating and removing files. The program presents an error control, validation of the existence of files and synchronization methods between three elements: client, server, source and destination server. All code was implemented in C and is intended for Linux.'
-	},
-	{
-		title : 'Talking Ideas',
-		img   : '/assets/projects/talkideas.png',
-		tags  : [
-			'business',
-		],
-		description : 'Talking Ideas aims to be a company who makes the connection between creative people who produce a business idea and investors, resorting on a website and conferences organized by the company. To this service we intend to add the recruitment of qualified professionals and the implementation of projects with value. This was an idea among a group of collaborators we all hope one day to materialize. '
-	},
-	{
-		title : 'Enterprise Resource Planning',
-		img   : '/assets/projects/erp.png',
-		tags  : [
-			'nav',
-			'business',
-			'erp',
-			'information_systems',
-		],
-		description : 'A feasibility study was conducted on the company Induflex to compare the advantages of Microsoft Dynamics NAV with other ERP\'s in the market and the company\'s ERP, the AS-400. In both systems were carried out sales cycles, report and instructions for the integration in external systems.'
+		description : [
+			'Website named Web of Developers to assist website developers. It works as a project manager. Registered users can submit their works and documents and share ideas. Includes a Forum for users to expose and discuss the themes they find convenient.'
+		]
 	},
 	{
 		title : 'Graphic Engine OpenGL',
@@ -346,18 +378,9 @@ angular.module('app')
 			'visual_studio',
 			'computer_graphics',
 		],
-		description : 'After the initial experiments with OpenGL, I created a small 3D graphics engine. Files with their own language called LSX (Language of Scenes in XML), are supplied to the application and the TinyXML library parses XML to C++ and OpenGL draws a scene. The files are in XML and follow a structure often used in computer graphics called Scene Graph.'
-	},
-	{
-		title : 'Annotation Of Pictures From Football Games',
-		img   : '/assets/projects/annotation.png',
-		tags  : [
-			'matlab',
-			'image_processing_toolbox',
-			'computer_graphics',
-			'computer_vision',
-		],
-		description : 'Program that allows the annotation of static and real football images giving the information of distances and virtual marks, the off-game line and a circle marking the minimum distance the opponents can be in a fault scenario. It was developed in Matlab, using the Image Processing Toolbox.'
+		description : [
+			'After the initial experiments with OpenGL, I created a small 3D graphics engine. Files with their own language called LSX (Language of Scenes in XML), are supplied to the application and the TinyXML library parses XML to C++ and OpenGL draws a scene. The files are in XML and follow a structure often used in computer graphics called Scene Graph.'
+		]
 	},
 	{
 		title : 'Labyrinth',
@@ -371,7 +394,9 @@ angular.module('app')
 			'games',
 			'var',
 		],
-		description : 'Game developed in C++ using the ARToolkit library. It is an amazing tool that enables the development of interfaces for augmented reality. The game consists in the insertion of fiducial marks within the reach of a camera, which generates a virtual board on the mark with obstacles, a ball and a hole in random positions. The aim is to guide the ball to the hole. The virtual objects were drawn in OpenGL except the ball that was made in 3dsMax and then exported.'
+		description : [
+			'Game developed in C++ using the ARToolkit library. It is an amazing tool that enables the development of interfaces for augmented reality. The game consists in the insertion of fiducial marks within the reach of a camera, which generates a virtual board on the mark with obstacles, a ball and a hole in random positions. The aim is to guide the ball to the hole. The virtual objects were drawn in OpenGL except the ball that was made in 3dsMax and then exported.'
+		]
 	},
 	{
 		title : 'Kamisado',
@@ -385,7 +410,9 @@ angular.module('app')
 			'games',
 			'ai',
 		],
-		description : 'Kamisado is a board game for two players. It was developed in C++ using OpenGL libraries for the GUI. The computer had an artificial intelligence implemented in Prolog. Communication between the two platforms is done via sockets.'
+		description : [
+			'Kamisado is a board game for two players. It was developed in C++ using OpenGL libraries for the GUI. The computer had an artificial intelligence implemented in Prolog. Communication between the two platforms is done via sockets.'
+		]
 	},
 	{
 		title : 'Carcassonne',
@@ -395,7 +422,9 @@ angular.module('app')
 			'games',
 			'formal_methods',
 		],
-		description : 'Carcassonne is a very fun game whose objective is the construction of fortified medieval towns, fields, roads and monasteries, with the use of mosaics laid down by the players alternately. The game board gains new forms shift after shift, through the pieces positioned by the players. It was done with the specification language Alloy.'
+		description : [
+			'Carcassonne is a very fun game whose objective is the construction of fortified medieval towns, fields, roads and monasteries, with the use of mosaics laid down by the players alternately. The game board gains new forms shift after shift, through the pieces positioned by the players. It was done with the specification language Alloy.'
+		]
 	},
 	{
 		title : 'Traffic Jam',
@@ -405,7 +434,9 @@ angular.module('app')
 			'games',
 			'formal_methods',
 		],
-		description : 'Traffic Jam is a board game with a random number of cars with variable length in which one special car has to reach the exit. This requires moving the other cars so that the special one has a free passage. The cars can only move in the direction in which they are initially turned, so a car vertically disposed can only move up or down, and a car disposed horizontally can only move just to the left or right. There is only one special car and no other car can run over another. Implemented with the declarative language VDM++.'
+		description : [
+			'Traffic Jam is a board game with a random number of cars with variable length in which one special car has to reach the exit. This requires moving the other cars so that the special one has a free passage. The cars can only move in the direction in which they are initially turned, so a car vertically disposed can only move up or down, and a car disposed horizontally can only move just to the left or right. There is only one special car and no other car can run over another. Implemented with the declarative language VDM++.'
+		]
 	},
 	{
 		title : 'Spangles',
@@ -416,7 +447,9 @@ angular.module('app')
 			'sicstus',
 			'ai',
 		],
-		description : 'Game developed in Prolog. It consists of two players and a 25X25 board in which each player has 25 triangles of one color. The first piece should be placed in the center and, after that, the following pieces can only be placed adjacently to the existing triangles on the board. The aim is to form a triangle of four pieces, in which the pieces at the tips belong to the winner, being the center piece indifferent. The game ends if a player achieves the objective of creating a triangle with its three pieces at the tips, or if the players play all the 25 pieces, thus ending in a tie.'
+		description : [
+			'Game developed in Prolog. It consists of two players and a 25X25 board in which each player has 25 triangles of one color. The first piece should be placed in the center and, after that, the following pieces can only be placed adjacently to the existing triangles on the board. The aim is to form a triangle of four pieces, in which the pieces at the tips belong to the winner, being the center piece indifferent. The game ends if a player achieves the objective of creating a triangle with its three pieces at the tips, or if the players play all the 25 pieces, thus ending in a tie.'
+		]
 	},
 	{
 		title : 'Arkanoid',
@@ -426,7 +459,9 @@ angular.module('app')
 			'assembly',
 			'games',
 		],
-		description : 'A classic that needs no introduction. Developed with the intention to learn low level programming by using routines in Assembly to be called later in C. I can claim that it made me remind to thank the gods of programming that today there are high level programming languages​.'
+		description : [
+			'A classic that needs no introduction. Developed with the intention to learn low level programming by using routines in Assembly to be called later in C. I can claim that it made me remind to thank the gods of programming that today there are high level programming languages​.'
+		]
 	},
 	{
 		title : 'Cast Away',
@@ -436,7 +471,10 @@ angular.module('app')
 			'visual_studio',
 			'games',
 		],
-		description : 'Soon after I completed the Scientific and Technological Informatics Course, I saw a screensaver in a shop of a lost man on an island with just a coconut tree making random tasks. I found it hilarious. That year I saw the movie Cast Away on TV and had an idea. I made a joke in Visual Basic which consisted of an island like in the screensaver, with a man who had to survive for four years, as in the movie, whilst meeting the basic needs as in the Sims. To ensure this, he had to learn how to hunt, build and perform other tasks. The tree provided almost everything except food since coconuts were bad for the poor man\'s health. And yes, this was way before Minecraft.'
+		description : [
+			'Soon after I completed the Scientific and Technological Informatics Course, I saw a screensaver in a shop of a lost man on an island with just a coconut tree making random tasks. I found it hilarious. That year I saw the movie Cast Away on TV and had an idea. I made a joke in Visual Basic which consisted of an island like in the screensaver, with a man who had to survive for four years, as in the movie, whilst meeting the basic needs as in the Sims. To ensure this, he had to learn how to hunt, build and perform other tasks. The tree provided almost everything except food since coconuts were bad for the poor man\'s health.',
+			'And yes, this was way before Minecraft.'
+		]
 	},
 	{
 		title : 'Voltrix',
@@ -448,7 +486,9 @@ angular.module('app')
 			'visual_studio',
 			'games',
 		],
-		description : 'Game that tried to imitate the popular card game Magic: The Gathering. I don\'t consider myself a big connoisseur of the game, however, I wanted to make a similar version of it in Visual Basic.NET with some characters made at the time with CorelDRAW, which was played by several players using different computers with .NET Remoting. It was very rough, but the several months of implementation were entertaining.'
+		description : [
+			'Game inspired by the popular card game Magic: The Gathering. I don\'t consider myself a big connoisseur of the game, however, I wanted to make a similar version of it in Visual Basic.NET with some characters made at the time with CorelDRAW, which was played by several players using different computers with .NET Remoting. It was very tough, but the several months of implementation were entertaining.'
+		]
 	},
 	{
 		title : 'Apocalypse',
@@ -458,7 +498,9 @@ angular.module('app')
 			'turbo_pascal',
 			'games',
 		],
-		description : 'First game I implemented in the first language I learned: Pascal. I was 14 years of tender age, attended the Scientific and Technological Informatics Course and played a lot of RPGs. The game tried to reflect this, however, it was linear at its core, as you could only walk in two directions and experience and money were always spent in the same things. The character was a super pixelated hero walking in scenarios where pixels were read from a bmp using a library implemented in the same course for Pascal. Today I look at the game and smirk at the enthusiasm of my adolescence.'
+		description : [
+			'First game I implemented in the first language I learned: Pascal. I was 14 years of tender age, attended the Scientific and Technological Informatics Course and played a lot of RPGs. The game tried to reflect this, however, it was linear at its core, as you could only walk in two directions and experience and money were always spent in the same things. The character was a super pixelated hero walking in scenarios where pixels were read from bitmaps using a library implemented in the same course for Pascal. Today I look at the game and smirk at the enthusiasm of my adolescence.'
+		]
 	},
 	{
 		title : 'Path Exploration',
@@ -470,41 +512,22 @@ angular.module('app')
 			'ai',
 			'agents_dai',
 		],
-		description : 'Multiagent System for cooperative exploration of paths in a field. There are three types of agents with different behaviors: Soldiers, Captains and Robots. The program generates a labyrinthine field with one entrance, one exit and multiple paths and bridges between them, but only one path reaches the end. The goal is for human agents (Captains and Soldiers) to get out of the maze in the shortest and most flexible way by exchanging information between them by radio, thus reaching the optimal solution.'
+		description : [
+			'Multiagent System for cooperative exploration of paths in a field. There are three types of agents with different behaviors: Soldiers, Captains and Robots. The program generates a labyrinthine field with one entrance, one exit and multiple paths and bridges between them, but only one path reaches the end. The goal is for human agents (Captains and Soldiers) to get out of the maze in the shortest and most flexible way by exchanging information between them by radio, thus reaching the optimal solution.'
+		]
 	},
 	{
-		title : 'OptiLote',
-		img   : '/assets/projects/optilote.png',
+		title : 'Annotation Of Pictures From Football Games',
+		img   : '/assets/projects/annotation.png',
 		tags  : [
-			'java',
-			'awt_swing',
-			'eclipse',
-			'ai',
+			'matlab',
+			'image_processing_toolbox',
+			'computer_graphics',
+			'computer_vision',
 		],
-		description : 'Program that uses a genetic algorithm and aims at solving the problem of optimizing the best locations of multiple clinics or hospitals in a city. It was done with an interface in Java Swing and AWT. Is it possible to edit all parameters, such as the city map and the costs and frequency of visits associated with buildings and the genetic algorithm\'s parameters, such as the stopping criteria or mutation probabilities.'
-	},
-	{
-		title : 'Dutch Auction',
-		img   : '/assets/projects/dutch.png',
-		tags  : [
-			'java',
-			'jade',
-			'eclipse',
-			'ai',
-			'electronic_business',
-		],
-		description : 'Application that simulates the behaviour of a Dutch Auction with multiple agents in Jade. There are stockbrokers who put their products for sale and buyers who list the products they want to buy. According to the protocol of the Dutch auction, the price of a certain product slowly decreases until a buyer accepts it.'
-	},
-	{
-		title : 'Navigation of a robot in an unknown environment',
-		img   : '/assets/projects/robot.png',
-		tags  : [
-			'java',
-			'cpp',
-			'eclipse',
-			'ai',
-		],
-		description : 'My first contact with Artificial Intelligence came in the form of a program the simulates the movement of a robot in an unfamiliar environment, while looking for a way that allows it to reach the final position. It had a very simple implementation and so I called it \'Artificial Stupidity\' as a joke. The logic module was implemented in Java and the maze generator in C++.'
+		description : [
+			'Program that allows the annotation of static and real football images giving the information of distances and virtual marks, the off-game line and a circle marking the minimum distance the opponents can be in a fault scenario. It was developed in Matlab, using the Image Processing Toolbox.'
+		]
 	},
 	{
 		title : 'SOSH',
@@ -516,28 +539,51 @@ angular.module('app')
 			'linux',
 			'os_shell',
 		],
-		description : 'Simple command interpreter called SOSH that acts as a shell (OS Shell) with the capability to communicate with an application which analyses and calculates letter frequency, thus having a client-server relationship between the two applications capable of dealing with conflict situations when accessing shared resources. It lets you create new processes with multiple threads and perform inter-communication through named pipes, use signals as a mechanism for communication and synchronization avoiding conflicts between competing entities by consulting an information array system.'
+		description : [
+			'Simple command interpreter called SOSH that acts as a shell (OS Shell) with the capability to communicate with an application which analyses and calculates letter frequency, thus having a client-server relationship between the two applications capable of dealing with conflict situations when accessing shared resources. It lets you create new processes with multiple threads and perform inter-communication through named pipes, use signals as a mechanism for communication and synchronization avoiding conflicts between competing entities by consulting an information array system.'
+		]
 	},
 	{
-		title : 'Yal Compiler',
-		img   : '/assets/projects/yal.png',
+		title : 'FTP Application',
+		img   : '/assets/projects/ftp.png',
+		tags  : [
+			'c',
+			'visual_studio',
+			'ftp',
+			'web',
+			'linux',
+			'networks',
+		],
+		description : [
+			'FTP client based application that allows you to control file transfer between two FTP servers, navigate the local machine and remote servers as well as perform query operations, creating and removing files. The program presents an error control, validation of the existence of files and synchronization methods between three elements: client, server, source and destination server. All code was implemented in C and is intended for Linux.'
+		]
+	},
+	{
+		title : 'Data Link Protocol',
+		img   : '/assets/projects/dlproto.png',
+		tags  : [
+			'c',
+			'visual_studio',
+			'web',
+			'linux',
+			'networks',
+		],
+		description : [
+			'Data transmission application implemented complying with a connection protocol. All code is implemented in C, and uses asynchronous data transmission in the serial ports. The operating system that is intended is Linux, and elements of the Linux system are triggered.'
+		]
+	},
+	{
+		title : 'Navigation of a robot in an unknown environment',
+		img   : '/assets/projects/robot.png',
 		tags  : [
 			'java',
-			'jasmin',
-			'javacc',
+			'cpp',
 			'eclipse',
-			'os',
+			'ai',
 		],
-		description : 'Compiler yal2jvm in JavaCC which translates a fictional language, Yal, into Java bytecodes. The compiler generates files with JVM instructions that are translated by Jasmin to Java bytecodes.'
-	},
-	{
-		title : 'Minimum Spanning Tree',
-		img   : '/assets/projects/primkruskal.png',
-		tags  : [
-			'java',
-			'os',
-		],
-		description : 'Simple Java program that generates a Minimum Spanning Tree from a graph loaded from a CSV file, using the Prim and Kruskal algorithms.'
+		description : [
+			'My first contact with Artificial Intelligence came in the form of a program the simulates the movement of a robot in an unfamiliar environment, while looking for a way that allows it to reach the final position. It had a very simple implementation and so I called it \'Artificial Stupidity\' as a joke. The logic module was implemented in Java and the maze generator in C++.'
+		]
 	},
 	{
 		title : 'Baseball Championship Managing System',
@@ -549,7 +595,10 @@ angular.module('app')
 			'notepadpp',
 			'management',
 		],
-		description : 'Program dedicated to the management of Baseball Championships through an access model with login and password followed by a menu that allows the management of athletes and teams as well as all elements belonging to the championship, also league management with game scheduling, partial and total game consultation, teams and elements and information queries about championships and user management. It is also possible to run a simulation of a game with the teams in the system.'
+		description : [
+			'Program dedicated to the management of Baseball Championships through an access model with login and password followed by a menu that allows the management of athletes and teams as well as all elements belonging to the championship, also league management with game scheduling, partial and total game consultation, teams and elements and information queries about championships and user management.',
+			'It is also possible to run a simulation of a game with the teams in the system.'
+		]
 	},
 	{
 		title : 'Portugal Bicycle Tour Managing System',
@@ -561,7 +610,69 @@ angular.module('app')
 			'eclipse',
 			'management',
 		],
-		description : 'Program for Portugal Bicycle Tour management through an access model with login and password followed by a menu with the options regarding the maintenance of data of Sports Director, Cyclist, Technical Team and general data of the Tour, Laps and results of each Lap, as well as historical details.'
+		description : [
+			'Program for Portugal Bicycle Tour management through an access model with login and password followed by a menu with the options regarding the maintenance of data of Sports Director, Cyclist, Technical Team and general data of the Tour, Laps and results of each Lap, as well as historical details.'
+		]
+	},
+	{
+		title : 'Enterprise Resource Planning',
+		img   : '/assets/projects/erp.png',
+		tags  : [
+			'nav',
+			'business',
+			'erp',
+			'information_systems',
+		],
+		description : [
+			'A feasibility study was conducted on the company Induflex to compare the advantages of Microsoft Dynamics NAV with other ERP\'s in the market and the company\'s ERP, the AS-400. In both systems were carried out sales cycles, report and instructions for the integration in external systems.'
+		]
+	},
+	{
+		title : 'Speak2Me',
+		img   : '/assets/projects/s2me.png',
+		tags  : [
+			'mobile',
+			's2s',
+		],
+		description : [
+			'Due to an interest in accessibility related problems, it was decided to create a service and a product that could benefit a social group unfortunately \'excluded\' from society: the hearing impaired. The project consists of an application for mobile devices that shows conversations detected by the mobile device in text balloons pointing to the source of the sound.',
+			'The signal processing is performed by a server, so the application requires the internet to be always active. This is called speech-to-text. It also has the inverse component text-to-speech so that an individual with hearing disability can answer properly. In the end, the application would be a Speech-to-Speech and a communication bridge besides gestual language.',
+			'However, the project was halted at the time for technological and economic viability reasons, as advanced techniques of sound triangulation and a very expensive infrastructure was needed.'
+		]
+	},
+	{
+		title : 'Talking Ideas',
+		img   : '/assets/projects/talkideas.png',
+		tags  : [
+			'business',
+		],
+		description : [
+			'Talking Ideas aims to be a company who makes the connection between creative people who produce a business idea and investors, resorting on a website and conferences organized by the company. To this service we intend to add the recruitment of qualified professionals and the implementation of projects with value.',
+			'This is still just an idea among a group of collaborators we all hope one day to materialize.'
+		]
+	},
+	{
+		title : 'Yal Compiler',
+		img   : '/assets/projects/yal.png',
+		tags  : [
+			'java',
+			'jasmin',
+			'javacc',
+			'eclipse',
+			'os',
+		],
+		description : [
+			'Compiler yal2jvm in JavaCC which translates a fictional language, Yal, into Java bytecodes. The compiler generates files with JVM instructions that are translated by Jasmin to Java bytecodes.'
+		]
+	},
+	{
+		title : 'Minimum Spanning Tree',
+		img   : '/assets/projects/primkruskal.png',
+		tags  : [
+			'java',
+			'os',
+		],
+		description : ['Simple Java program that generates a Minimum Spanning Tree from a graph loaded from a CSV file, using the Prim and Kruskal algorithms.']
 	},
 	{
 		title : 'Multimedia Project',
@@ -571,19 +682,9 @@ angular.module('app')
 			'music',
 			'agm',
 		],
-		description : 'Near the end of my master\'s, I attended the Automatic Generation of Music course. It was an extremely rewarding experience for me to join the world of music with the world of computers. The result is simply amazing. Building a library of patches in MAX6 also allowed me to extend my musical knowledge.'
-	},
-	{
-		title : 'ARMotion',
-		img   : '/assets/projects/armotion.png',
-		tags  : [
-			'java',
-			'c',
-			'artoolkit',
-			'jmusic',
-			'music',
-		],
-		description : 'Project that allows a user to play music by means of hand movement in the air. Various known algorithms are provided that allow the automatic generation of music such as genetic, drunk walk, Mozart\'s dice game, sinusoidal melody, cellular automata, fractals, among many others. The user allocates one track of the music to one hand and chooses the type of instrument that plays it. You can allocate a second on the other hand. Intended to imitate the movements of a maestro, as the vertical movements of the right hand set the pace and circular movements play the notes.'
+		description : [
+			'Near the end of my master\'s, I attended the Automatic Generation of Music course. It was an extremely rewarding experience for me to join the world of music with the world of computers. The result is simply amazing. Building a library of patches in MAX6 also allowed me to extend my musical knowledge.'
+		]
 	},
 	{
 		title : 'Green Grass of Tunnel',
@@ -591,7 +692,9 @@ angular.module('app')
 		tags  : [
 			'music'
 		],
-		description : 'Cover of a song from the Icelandic band Mum. It will always be a work in progress because the music deserves much more. I don\'t know if it\'s the country, but some of the most beautiful melodies I know come from Iceland and the inhabitants seem to be endowed with an extraordinary sensibility.'
+		description : [
+			'Cover of a song from the Icelandic band Mum. It will always be a work in progress because the music deserves much more. I don\'t know if it\'s the country, but some of the most beautiful melodies I know come from Iceland and the inhabitants seem to be endowed with an extraordinary sensibility.'
+		]
 	},
 	{
 		title : 'Pachelbel\'s Canon',
@@ -599,7 +702,9 @@ angular.module('app')
 		tags  : [
 			'music'
 		],
-		description : 'I have no musical degree but I like to play a little bit of everything. When I started, the tendency was always to learn classical compositions like Cavatina, Romance d\'Amour or Asturias that I consider essential in my guitar repertoire. Unfortunately I did not give the proper attention to one of my favourite classical compositions, Canon, until several versions began to appear on Youtube. I decided to make my adaptation largely based on Trace Bundy\'s version. A work in progress.'
+		description : [
+			'I have no musical degree but I like to play a little bit of everything. When I started, the tendency was always to learn classical compositions like Cavatina, Romance d\'Amour or Asturias that I consider essential in my guitar repertoire. Unfortunately I did not give the proper attention to one of my favourite classical compositions, Canon, until several versions began to appear on Youtube. I decided to make my adaptation largely based on Trace Bundy\'s version. A work in progress.'
+		]
 	},
 ]
 )

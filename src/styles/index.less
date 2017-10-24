@@ -105,9 +105,10 @@ img.award {
 
 img.project {
   border-radius: 1%;
-  width: 250px;
-  max-width: 250px;
-  min-width: 250px;
+  width: 230px;
+  max-width: 230px;
+  min-width: 230px;
+  border: 1px solid rgba(0,0,0,0.12);
 }
 
 img.tag {
@@ -187,8 +188,7 @@ img.tag {
 
 .experience-bullets,
 .tech-check,
-.education-bullets,
-.project-description {
+.education-bullets {
   padding-left: 16px;
 }
 
@@ -226,15 +226,23 @@ img.tag {
 }
 
 .tag-item, .tag-item-selected {
-  min-width: 300px;
-  max-width: 300px;
-  width: 300px;
+  min-width: 250px;
+  max-width: 250px;
+  width: 250px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .project-description {
-  width: 640px;
+  padding-right: 16px;
+  align-self: center;
   text-align: justify;
+}
+
+.project-image {
+  padding-left: 16px;
+  padding-right: 16px;
+  align-self: center;
+  float: right;
 }

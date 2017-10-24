@@ -60,10 +60,11 @@ section#projects(layout="column")
       .project-content(layout="column")
         span.md-headline.project-title {{proj.title}}
         .project-details(layout="row")
+          .project-description(layout="column")
+            span(ng-repeat="description in proj.description") {{description}}
+          .flex
           .project-image
             img.project(ng-src="{{proj.img}}")
-          .project-description
-            span {{proj.description}}
         .project-tag-divider
           md-divider
         .project-tags(layout="row")

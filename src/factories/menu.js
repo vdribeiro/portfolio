@@ -45,9 +45,21 @@ angular.module('app')
         },
       ]
 
-      this.selected = {
-        parent : 'Profile',
-        child  : 'Introduction'
+      var url = $location.path()
+      var urlSubs = url.split('/')
+
+      if (urlSubs.length > 1) {
+
+        this.selected = {
+          parent : _.capitalize(urlSubs[1]),
+          child  : null
+        }
+      } else {
+
+        this.selected = {
+          parent : 'Profile',
+          child  : 'Introduction'
+        }
       }
     }
 
@@ -139,7 +151,7 @@ angular.module('app')
         if (path === hash) $location.hash(null)
 
         $timeout(function() {
-          
+
           self.screen.isLoading = false
         })
       })
