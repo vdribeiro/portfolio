@@ -10,9 +10,7 @@ angular.module('app')
   'RESEARCH',
   '$rootScope',
   '$timeout',
-  '$anchorScroll',
   'Utils',
-  'ScreenManager',
   'MenuManager',
   'ProjectManager',
   function(
@@ -25,9 +23,7 @@ angular.module('app')
     RESEARCH,
     $rootScope,
     $timeout,
-    $anchorScroll,
     Utils,
-    ScreenManager,
     MenuManager,
     ProjectManager
   ) {
@@ -43,26 +39,12 @@ angular.module('app')
     $rootScope.research = RESEARCH
 
     $rootScope.utils = Utils
-    $rootScope.screen = ScreenManager
     $rootScope.menu = MenuManager
     $rootScope.project = ProjectManager
 
-    $rootScope.isLoading = true
-    $rootScope.dialogImage = null
-
-    ScreenManager.watch($rootScope)
-
-    $timeout(function() { ScreenManager.showScreen() })
-
-    $rootScope.$on('$routeChangeStart', function () {
-      $rootScope.isLoading = true
-    })
-
-    $rootScope.$on('$routeChangeSuccess', function () {
-      $timeout(function() {
-        $anchorScroll()
-        $rootScope.isLoading = false
-      })
+    $timeout(function() {
+      MenuManager.watch($rootScope)
+      MenuManager.showScreen()
     })
 
   }]

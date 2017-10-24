@@ -4,13 +4,25 @@ angular.module('app')
   '$timeout',
   '$location',
   '$anchorScroll',
+  '$mdMedia',
+  '$mdSidenav',
   function(
     $timeout,
     $location,
-    $anchorScroll
+    $anchorScroll,
+    $mdMedia,
+    $mdSidenav
   ) {
 
     function MenuManager() {
+
+      this.minWidth = '(min-width: 1100px)'
+
+      this.screen = {
+        show       : false,
+        bigScreen  : $mdMedia(this.minWidth),
+        isLoading  : false,
+      }
 
       this.items = [
         {
@@ -39,7 +51,68 @@ angular.module('app')
       }
     }
 
+    MenuManager.prototype.showScreen = function() {
+
+      this.screen.show = true
+    }
+
+    MenuManager.prototype.toggleSidebar = function() {
+
+      var sidebar = $mdSidenav('sidebar')
+      if (_.isNil(sidebar)) return
+
+      sidebar.toggle()
+    }
+
+    MenuManager.prototype.watch = function(scope) {
+      var self = this
+
+      scope.$watch(function() {
+
+        return $mdMedia(self.minWidth)
+      }, function(big) {
+
+        self.toggleSidebarByScreenSize(big)
+      })
+    }
+
+    MenuManager.prototype.toggleSidebarByScreenSize = function(big) {
+
+      this.screen.bigScreen = big
+
+      var sidebar = $mdSidenav('sidebar')
+      if (_.isNil(sidebar)) return false
+
+      if (this.screen.bigScreen) return sidebar.open()
+
+      return sidebar.close()
+    }
+
+    MenuManager.prototype.isScreenBig = function() {
+
+      return $mdMedia(this.minWidth)
+    }
+
+    MenuManager.prototype.isSidebarLocked = function() {
+
+      if ($mdMedia('portrait')) return false
+
+      return $mdMedia(this.minWidth)
+    }
+
+    MenuManager.prototype.isSelected = function(parent, child) {
+
+      if (_.isNil(parent.children)) return this.selected.parent === parent.title
+
+      return this.selected.parent === parent.title && this.selected.child === child
+    }
+
     MenuManager.prototype.select = function(parent, child) {
+      var self = this
+
+      if (this.selected.parent !== parent.title) {
+        this.screen.isLoading = true
+      }
 
       var path = _.replace(_.lowerCase(parent.title), ' ', '_')
       var hash = path
@@ -56,30 +129,19 @@ angular.module('app')
         parent.show = !parent.show
       }
 
-      this.goTo(path, hash)
-    }
-
-    MenuManager.prototype.isSelected = function(parent, child) {
-
-      if (_.isNil(parent.children)) {
-
-        return this.selected.parent === parent.title
-      }
-
-      return this.selected.parent === parent.title && this.selected.child === child
-    }
-
-    MenuManager.prototype.goTo = function(path, hash) {
-      var self = this
       $location.path(path)
 
       $timeout(function() {
 
         $location.hash(hash)
         $anchorScroll()
-        if (path === hash) {
-          $location.hash(null)
-        }
+
+        if (path === hash) $location.hash(null)
+
+        $timeout(function() {
+          
+          self.screen.isLoading = false
+        })
       })
     }
 

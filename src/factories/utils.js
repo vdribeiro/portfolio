@@ -7,7 +7,6 @@ angular.module('app')
   ) {
 
     function Utils() {
-
     }
 
     Utils.prototype.isLastIndex = function(array, index) {
@@ -20,25 +19,28 @@ angular.module('app')
 
     Utils.prototype.showDialog = function(ev, image) {
 
-      $mdDialog.show({
+      var dialog = {
         parent: angular.element(document.body),
         targetEvent: ev,
         clickOutsideToClose: true,
         escapeToClose: true,
-        template: '<md-dialog ng-class="dialog.css"><md-dialog-content role="document" tabindex="-1" class="md-dialog-content"><img layout-fill ng-src="{{dialogImage}}" class="award"/></md-dialog-content></md-dialog>',
         locals: {
           image: image,
         },
         controller: [
-          '$rootScope',
+          '$scope',
           'image',
           function(
-            $rootScope,
+            $scope,
             image
           ) {
-            $rootScope.dialogImage = image
-          }]
-      })
+            $scope.dialogImage = image
+          }
+        ],
+        template: '<md-dialog ng-class="dialog.css"><md-dialog-content role="document" tabindex="-1" class="md-dialog-content"><img layout-fill ng-src="{{dialogImage}}" class="award"/></md-dialog-content></md-dialog>',
+      }
+
+      $mdDialog.show(dialog)
     }
 
     return new Utils()

@@ -49,12 +49,6 @@ gulp.task('jade', function() {
     .pipe(gulp.dest('./tmp'))
 })
 
-gulp.task('templates', ['jade'], function() {
-  return gulp.src(['./tmp/templates/**/*.html', '!./tmp/templates/includes/**'])
-    .pipe($.angularTemplatecache({ standalone: true }))
-    .pipe(gulp.dest('./tmp'))
-})
-
 gulp.task('less', function() {
   return gulp.src(paths.less)
     .pipe(plumber())
@@ -73,12 +67,7 @@ gulp.task('assets', function() {
     .pipe(gulp.dest('./dist/assets'))
 })
 
-gulp.task('html', function() {
-  return gulp.src(['./tmp/views/**', './temp/views/**/*'])
-    .pipe(gulp.dest('./dist/views'))
-})
-
-gulp.task('concat', ['templates'], function() {
+gulp.task('concat', function() {
 
   var assets = $.useref.assets({
     searchPath : [
@@ -95,7 +84,7 @@ gulp.task('concat', ['templates'], function() {
     .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('build', ['jade', 'less', 'templates', 'styles', 'assets', 'html', 'concat'])
+gulp.task('build', ['jade', 'less', 'styles', 'assets', 'concat'])
 
 // POST PROCESS
 gulp.task('prepend-static-url', ['concat', 'styles'], function() {

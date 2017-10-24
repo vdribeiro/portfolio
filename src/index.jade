@@ -15,15 +15,15 @@ html(ng-app="app" ng-controller="RootController")
   body(
     ng-cloak=""
     layout="column"
-    ng-init="screen.screen.show=false"
-    ng-show="screen.screen.show"
+    ng-init="menu.screen.show=false"
+    ng-show="menu.screen.show"
   )
-    md-toolbar(ng-show="!screen.isSidebarLocked()")
+    md-toolbar(ng-show="!menu.isSidebarLocked()")
       .md-toolbar-tools
         md-button.md-icon-button(
           aria-label="Menu"
-          ng-click="screen.toggleSidebar('sidebar')"
-          ng-show="!screen.isSidebarLocked()"
+          ng-click="menu.toggleSidebar()"
+          ng-show="!menu.isSidebarLocked()"
         )
           i.material-icons menu
         span(flex="", md-truncate="") Vitor Ribeiro
@@ -32,7 +32,7 @@ html(ng-app="app" ng-controller="RootController")
     
       md-sidenav.md-sidenav-left(
         md-component-id="sidebar"
-        md-is-locked-open="screen.isSidebarLocked()"
+        md-is-locked-open="menu.isSidebarLocked()"
         md-whiteframe="4"
         layout="column"
       )
@@ -69,8 +69,7 @@ html(ng-app="app" ng-controller="RootController")
       md-content.main(flex="")
         .route.view(
           ng-view=""
-          ng-class="{true: 'loading', false: null}[isLoading]"
-          ng-show="!isLoading"
+          ng-show="!menu.screen.isLoading"
         )
 
   include /includes/scripts
