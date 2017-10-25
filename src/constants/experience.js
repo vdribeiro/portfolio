@@ -92,9 +92,9 @@ angular.module('app')
     img : '/assets/experience/induflex.png',
     url : 'http://www.induflex.pt/',
     dates : [
-      '08/2005',
-      '08/2008',
       '08/2011',
+      '08/2008',
+      '08/2005',
     ],
     bullets : [
       'Manufacture of upholstered furniture',
