@@ -47,8 +47,8 @@ angular.module('app')
     }
 
     ProjectManager.prototype.isTagSelected = function(tag) {
-
-      return this.selectedTags.indexOf(tag) < 0
+      
+      return !!_.find(this.selectedTags, tag)
     }
 
     ProjectManager.prototype.getTagName = function(key) {

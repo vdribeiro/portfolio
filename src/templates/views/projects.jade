@@ -41,7 +41,8 @@ section#projects(layout="column")
         
         md-list(ng-if="project.tagsVisible")
           .tags-filtered
-            md-list-item.md-2-line.tag-item(
+            md-list-item.tag-item(
+              layout-align="start center"
               ng-repeat="tag in project.tags"
               ng-class="{true: 'selected', false: null}[project.isTagSelected(tag)]"
             )

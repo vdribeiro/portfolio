@@ -139,6 +139,7 @@ angular.module('app')
       } else if (!_.isNil(parent.children)) {
 
         parent.show = !parent.show
+        return
       }
 
       $location.path(path)
