@@ -1,3 +1,5 @@
+// GENERAL
+
 * {
   font-size: 100%;
   font-family: Roboto;
@@ -19,6 +21,12 @@ a:active {
   color: lightblue;
 }
 
+.selected {
+  background-color: rgba(217,217,217,0.8);
+}
+
+// NAVIGATION
+
 md-toolbar {
   height: 50px;
   min-height: 50px;
@@ -37,26 +45,74 @@ md-sidenav.md-closed.md-locked-open-add-active {
   width: 180px !important;
 }
 
-.selected {
-  background-color: rgba(217,217,217,0.8);
-}
+// PROFILE
 
-section#profile_introduction, section#projects {
+section#profile_introduction {
   line-height: 1.5;
 }
 
-md-card.tech-card {
-  text-align: center;
-  width: 120px;
-  max-width: 120px;
-  min-width: 120px;
+.profile-divider {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-md-card.award-card {
-  text-align: center;
-  width: 320px;
-  max-width: 320px;
-  min-width: 320px;
+.profile-info {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  padding-top: 16px;
+}
+
+img.profile {
+  border-radius: 1%;
+  max-width: 250px;
+  min-width: 50px;
+}
+
+.profile-cv {
+  width: 95%;
+  padding-top: 10px;
+}
+
+.profile-details {
+  padding-top: 16px;
+  margin-left: -16px;
+}
+
+.profile-info-title {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  text-align: right;
+}
+
+.profile-info-values {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  text-align: left;
+  border-left: 1px solid rgba(0,0,0,0.12);
+}
+
+// EXPERIENCE AND EDUCATION
+
+.experience-content,
+.education-content {
+  padding: 16px;
+}
+
+.experience-dates,
+.experience-positions,
+.education-dates,
+.education-qualifications {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 span.md-title.experience-position-title,
@@ -64,24 +120,16 @@ span.md-title.education-qualification-title {
   font-weight: normal;
 }
 
-span.md-headline.tech-group-title {
+.experience-bar,
+.education-bar {
   padding-left: 8px;
-  padding-bottom: 32px;
+  padding-right: 8px;
+  color: rgba(0,0,0,0.5);
 }
 
-span.md-subhead.tech-title {
-  padding-top: 8px;
-}
-
-span.tag {
-  padding-left: 8px;
-}
-
-img.profile {
-  border-radius: 1%;
-  width: 250px;
-  max-width: 250px;
-  min-width: 50px;
+.experience-details,
+.education-details {
+  padding-top: 24px;
 }
 
 img.experience,
@@ -95,20 +143,85 @@ img.education {
   min-height: 100px;
 }
 
+.experience-bullets,
+.education-bullets {
+  padding-left: 16px;
+}
+
+// TECHNOLOGY
+
+.tech-check {
+  padding-left: 16px;
+}
+
+.deprecated {
+  opacity: 0.5;
+}
+
+.tech-group {
+  padding-bottom: 24px;
+}
+
+span.md-headline.tech-group-title {
+  padding-left: 8px;
+  padding-bottom: 32px;
+}
+
+.tech-group-details {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+md-card.tech-card {
+  text-align: center;
+  width: 120px;
+  max-width: 120px;
+  min-width: 120px;
+}
+
 img.tech {
   min-width: 100px;
+}
+
+span.md-subhead.tech-title {
+  padding-top: 8px;
+}
+
+// AWARDS
+
+.profile-awards {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+md-card.award-card {
+  text-align: center;
+  width: 320px;
+  max-width: 320px;
+  min-width: 320px;
 }
 
 img.award {
   cursor: pointer;
 }
 
-img.project {
-  border-radius: 1%;
-  width: 230px;
-  max-width: 230px;
-  min-width: 230px;
-  border: 1px solid rgba(0,0,0,0.12);
+// CONNECT
+
+// RESEARCH
+
+.md-list-item-text.research {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+// PROJECTS
+
+section#projects {
+  line-height: 1.5;
 }
 
 img.tag {
@@ -120,102 +233,12 @@ img.tag {
   min-height: 30px;
 }
 
-.profile-divider {
-  padding-left: 16px;
-  padding-right: 16px;
+span.tag {
+  padding-left: 8px;
 }
 
-.profile-image,
-.profile-details,
 .tags-check {
   padding-top: 16px;
-}
-
-.profile-cv {
-  width: 95%;
-  padding-top: 10px;
-}
-
-.profile-info-title {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 16px;
-  min-width: 30%;
-  width: 30%;
-  text-align: right;
-}
-
-.profile-info-values {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 16px;
-  width: 70%;
-  text-align: left;
-  border-left: 1px solid rgba(0,0,0,0.12);
-}
-
-.experience-bar,
-.education-bar {
-  padding-left: 8px;
-  padding-right: 8px;
-  color: rgba(0,0,0,0.5);
-}
-
-.experience-content,
-.education-content,
-.project-content {
-  padding: 16px;
-}
-
-.experience-dates,
-.experience-positions,
-.tech-group-details,
-.education-dates,
-.education-qualifications,
-.profile-awards,
-.project-tags {
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.experience-details,
-.education-details,
-.project-details {
-  padding-top: 24px;
-}
-
-.experience-bullets,
-.tech-check,
-.education-bullets {
-  padding-left: 16px;
-}
-
-.tech-group {
-  padding-bottom: 24px;
-}
-
-.deprecated {
-  opacity: 0.5;
-}
-
-.md-list-item-text.research {
-  text-align: justify;
-  line-height: 1.8;
-}
-
-.project-tag {
-  padding-right: 8px;
-}
-
-.project-tag-divider {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.tags-filter {
-  background-color: white;
 }
 
 .tags-filtered {
@@ -225,19 +248,29 @@ img.tag {
   flex-wrap: wrap;
 }
 
-.tag-item, .tag-item-selected {
+.tag-item {
   min-width: 250px;
   max-width: 250px;
   width: 250px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  align-self: center;
+}
+
+.project-content {
+  padding: 16px;
+}
+
+.project-details {
+  padding-top: 24px;
 }
 
 .project-description {
   padding-right: 16px;
   align-self: center;
   text-align: justify;
+  min-width: 200px;
 }
 
 .project-image {
@@ -245,4 +278,27 @@ img.tag {
   padding-right: 16px;
   align-self: center;
   float: right;
+}
+
+img.project {
+  border-radius: 1%;
+  max-width: 230px;
+  min-width: 50px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.project-tag-divider {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.project-tags {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.project-tag {
+  padding-right: 8px;
 }
