@@ -52,7 +52,27 @@ section#projects(layout="column")
     
     md-card(layout="column" ng-repeat="proj in project.getProjects()")
       .project-content(layout="column")
-        span.md-headline.project-title {{proj.title}}
+        .project-title(layout="row")
+          span.md-headline.project-title {{proj.title}}
+          .project-links(layout="row")
+            a(
+              ng-if="!!{{proj.link}}"
+              ng-href="{{proj.link}}" 
+              target="_blank"
+            )
+              img.link(src='/assets/links/link.png')
+            a(
+              ng-if="!!{{proj.repo}}"
+              ng-href="{{proj.repo}}" 
+              target="_blank"
+            )
+              img.repo(src='/assets/links/github.png')
+            a(
+              ng-if="!!{{proj.play}}"
+              ng-href="{{proj.play}}" 
+              target="_blank"
+            )
+              img.play(src='/assets/links/play.png')
         .project-details(layout="row")
           .project-description(layout="column")
             span(ng-repeat="description in proj.description") {{description}}
