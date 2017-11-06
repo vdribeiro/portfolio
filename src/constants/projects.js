@@ -83,7 +83,7 @@ angular.module('app')
 			'rest',
 		],
 		description : [
-			'An Innovative solution for real-time generation of integrated platforms.'
+			'An innovative solution for real-time generation of integrated platforms.'
 		],
 		repo : 'https://github.com/toflow',
 	},
@@ -107,7 +107,6 @@ angular.module('app')
 		description : [
 			'The Future Cities Project is a FP7 funded project focused on the concept of future city as an urban environment centered on human needs, while exploiting the massive use of ICT embedded in the city fabric. The SenseMyCity framework consists of an infrastructure for simplified collection of geo-indexed data sensed using mobile devices, along with a pool of users willing to participate in experiments and the logistic support for city-wide experiments.',
 			'The technical infrastructure consists of: a mobile framework to gather data from the device\'s available sensors; a server to process the data and store it in a database; a webpage to consult information in a user friendly way.',
-			'This framework is capable of handling a myriad sensors. Learn more at http://cloud.futurecities.up.pt/sensemycity/.'
 		],
 		link : 'https://futurecities.up.pt/site/',
 	},
@@ -236,6 +235,19 @@ angular.module('app')
 		link : 'http://cloud.futurecities.up.pt/sensemycity/project/scps/',
 	},
 	{
+		title : 'Companion Library',
+		img   : '/assets/projects/companion.png',
+		tags  : [
+			'android',
+			'java',
+		],
+		description : [
+			'Seeing that I have been developing for Android since Eclair (2.1), everytime there was an update, or I wanted a shiny new non-existing feature, I tried to keep my applications up to date and implemented compatibility code. The result was an extensive library that accompanies me in all of my Android projects through the years. My Companion Library.',
+			'Some time later the official Android Support Libraries came and eased up most of that work. Still, it remains indispensable for my work.',
+			'It includes helpers for storage and security, accounts, notifications, sensors, database, networks, location and time, telephony, media, math and physics functions, toolbar, animations, dialogs, parsers and many more other utilities.'
+		]
+	},
+	{
 		title : 'Portfolio',
 		img   : '/assets/projects/portfolio.png',
 		tags  : [
@@ -298,96 +310,6 @@ angular.module('app')
 		description : [
 			'Project for Tlantic responsible for Continente Online. What this project proposes is a new way to accelerate the purchasing process, taking advantage of the growth of mobile technologies and thus enabling the construction of shopping lists to facilitate the subsequent processes in e-commerce stores, as well as to assist the process of physical purchasing. The great advantage of this application is the ability to share lists and the fact that it provides an API for retailers who want to advertise their products in catalogs, properly filtered with user preferences through a heuristic.'
 		]
-	},
-	{
-		title : 'EventWide',
-		img   : '/assets/projects/eventwide.png',
-		tags  : [
-			'android',
-			'java',
-			'sqlite',
-			'oracle',
-			'eclipse',
-			'rest',
-			'mobile',
-			'web',
-		],
-		description : [
-			'Application whose purpose is to share events keeping an Oracle database and using Google Calendar. The implementation consists of three modules: business partners, customers and administrators. Business partners, after being registered, create or update events (bars, furniture fairs, festivals, nightclubs, etc.) that are kept on a server. Customers consult the events on the server. Lastly the administrator app is intended for server maintenance.'
-		],
-		repo : 'https://github.com/vdribeiro/eventwide',
-	},
-	{
-		title : 'WikiBooks',
-		img   : '/assets/projects/dokuwiki.png',
-		tags  : [
-			'php',
-			'apache',
-			'dokuwiki',
-			'eclipse',
-			'web',
-		],
-		description : [
-			'DokuWiki plugin in PHP whose goal is to facilitate the consultation of books in this Wiki. Allows adding, editing and removal of an entire book library structure (books, publications, chapters, pages, etc.) and export to pdf its various elements. Users can also review these various elements and through a comparison module find similarities between them.'
-		],
-		repo : 'https://github.com/vdribeiro/books',
-	},
-	{
-		title : 'OptiLote',
-		img   : '/assets/projects/optilote.png',
-		tags  : [
-			'java',
-			'awt_swing',
-			'eclipse',
-			'ai',
-		],
-		description : [
-			'Program that uses a genetic algorithm and aims at solving the problem of optimizing the best locations of multiple clinics or hospitals in a city. It was done with an interface in Java Swing and AWT. Is it possible to edit all parameters, such as the city map and the costs and frequency of visits associated with buildings and the genetic algorithm\'s parameters, such as the stopping criteria or mutation probabilities.'
-		],
-		repo : 'https://github.com/vdribeiro/optilote',
-	},
-	{
-		title : 'Dutch Auction',
-		img   : '/assets/projects/dutch.png',
-		tags  : [
-			'java',
-			'jade',
-			'eclipse',
-			'ai',
-			'electronic_business',
-		],
-		description : [
-			'Application that simulates the behaviour of a Dutch Auction with multiple agents in Jade. There are stockbrokers who put their products for sale and buyers who list the products they want to buy. According to the protocol of the Dutch auction, the price of a certain product slowly decreases until a buyer accepts it.'
-		],
-		repo : 'https://github.com/vdribeiro/dutch_auction',
-	},
-	{
-		title : 'iTest',
-		img   : '/assets/projects/itest.png',
-		tags  : [
-			'ruby',
-			'cucumber',
-			'web',
-			'bdd',
-		],
-		description : [
-			'BDD (Behavior Driven Development) Web platform to test projects that are submitted by registered users. In addition to the projects, it is possible to suggest features and comment submissions. Works as a Project Manager but with a surprise. The great advantage of the site is the fact that the client can perform the tests without having to understand programming. Tests can be written in plain text obeying certain \'keywords\' and the site does the rest, informing the user if the test is valid and if it passed.'
-		]
-	},
-	{
-		title : 'Web Of Developers',
-		img   : '/assets/projects/wod.png',
-		tags  : [
-			'php',
-			'apache',
-			'eclipse',
-			'web',
-			'project_manager',
-		],
-		description : [
-			'Website named Web of Developers to assist website developers. It works as a project manager. Registered users can submit their works and documents and share ideas. Includes a Forum for users to expose and discuss the themes they find convenient.'
-		],
-		repo : 'https://github.com/vdribeiro/wod',
 	},
 	{
 		title : 'Graphic Engine OpenGL',
@@ -531,6 +453,96 @@ angular.module('app')
 		]
 	},
 	{
+		title : 'OptiLote',
+		img   : '/assets/projects/optilote.png',
+		tags  : [
+			'java',
+			'awt_swing',
+			'eclipse',
+			'ai',
+		],
+		description : [
+			'Program that uses a genetic algorithm and aims at solving the problem of optimizing the best locations of multiple clinics or hospitals in a city. It was done with an interface in Java Swing and AWT. Is it possible to edit all parameters, such as the city map and the costs and frequency of visits associated with buildings and the genetic algorithm\'s parameters, such as the stopping criteria or mutation probabilities.'
+		],
+		repo : 'https://github.com/vdribeiro/optilote',
+	},
+	{
+		title : 'EventWide',
+		img   : '/assets/projects/eventwide.png',
+		tags  : [
+			'android',
+			'java',
+			'sqlite',
+			'oracle',
+			'eclipse',
+			'rest',
+			'mobile',
+			'web',
+		],
+		description : [
+			'Application whose purpose is to share events keeping an Oracle database and using Google Calendar. The implementation consists of three modules: business partners, customers and administrators. Business partners, after being registered, create or update events (bars, furniture fairs, festivals, nightclubs, etc.) that are kept on a server. Customers consult the events on the server. Lastly the administrator app is intended for server maintenance.'
+		],
+		repo : 'https://github.com/vdribeiro/eventwide',
+	},
+	{
+		title : 'WikiBooks',
+		img   : '/assets/projects/dokuwiki.png',
+		tags  : [
+			'php',
+			'apache',
+			'dokuwiki',
+			'eclipse',
+			'web',
+		],
+		description : [
+			'DokuWiki plugin in PHP whose goal is to facilitate the consultation of books in this Wiki. Allows adding, editing and removal of an entire book library structure (books, publications, chapters, pages, etc.) and export to pdf its various elements. Users can also review these various elements and through a comparison module find similarities between them.'
+		],
+		repo : 'https://github.com/vdribeiro/books',
+	},
+	{
+		title : 'Dutch Auction',
+		img   : '/assets/projects/dutch.png',
+		tags  : [
+			'java',
+			'jade',
+			'eclipse',
+			'ai',
+			'electronic_business',
+		],
+		description : [
+			'Application that simulates the behaviour of a Dutch Auction with multiple agents in Jade. There are stockbrokers who put their products for sale and buyers who list the products they want to buy. According to the protocol of the Dutch auction, the price of a certain product slowly decreases until a buyer accepts it.'
+		],
+		repo : 'https://github.com/vdribeiro/dutch_auction',
+	},
+	{
+		title : 'iTest',
+		img   : '/assets/projects/itest.png',
+		tags  : [
+			'ruby',
+			'cucumber',
+			'web',
+			'bdd',
+		],
+		description : [
+			'BDD (Behavior Driven Development) Web platform to test projects that are submitted by registered users. In addition to the projects, it is possible to suggest features and comment submissions. Works as a Project Manager but with a surprise. The great advantage of the site is the fact that the client can perform the tests without having to understand programming. Tests can be written in plain text obeying certain \'keywords\' and the site does the rest, informing the user if the test is valid and if it passed.'
+		]
+	},
+	{
+		title : 'Web Of Developers',
+		img   : '/assets/projects/wod.png',
+		tags  : [
+			'php',
+			'apache',
+			'eclipse',
+			'web',
+			'project_manager',
+		],
+		description : [
+			'Website named Web of Developers to assist website developers. It works as a project manager. Registered users can submit their works and documents and share ideas. Includes a Forum for users to expose and discuss the themes they find convenient.'
+		],
+		repo : 'https://github.com/vdribeiro/wod',
+	},
+	{
 		title : 'Path Exploration',
 		img   : '/assets/projects/pathexplorer.png',
 		tags  : [
@@ -649,6 +661,46 @@ angular.module('app')
 		]
 	},
 	{
+		title : 'Yal Compiler',
+		img   : '/assets/projects/yal.png',
+		tags  : [
+			'java',
+			'jasmin',
+			'javacc',
+			'eclipse',
+			'os',
+		],
+		description : [
+			'Compiler yal2jvm in JavaCC which translates a fictional language, Yal, into Java bytecodes.',
+			'The compiler generates files with JVM instructions that are translated by Jasmin to Java bytecodes.'
+		],
+		repo : 'https://github.com/vdribeiro/yal',
+	},
+	{
+		title : 'Minimum Spanning Tree',
+		img   : '/assets/projects/primkruskal.png',
+		tags  : [
+			'java',
+			'os',
+		],
+		description : [
+			'Simple Java program that generates a Minimum Spanning Tree from a graph loaded from a CSV file, using the Prim and Kruskal algorithms.'
+		],
+		repo : 'https://github.com/vdribeiro/graph',
+	},
+	{
+		title : 'Multimedia Project',
+		img   : '/assets/projects/max6.png',
+		tags  : [
+			'max',
+			'music',
+			'agm',
+		],
+		description : [
+			'Near the end of my master\'s, I attended the Automatic Generation of Music course. It was an extremely rewarding experience for me to join the world of music with the world of computers. The result is simply amazing. Building a library of patches in MAX6 also allowed me to extend my musical knowledge.'
+		]
+	},
+	{
 		title : 'Enterprise Resource Planning',
 		img   : '/assets/projects/erp.png',
 		tags  : [
@@ -683,45 +735,6 @@ angular.module('app')
 		description : [
 			'Talking Ideas aims to be a company who makes the connection between creative people who produce a business idea and investors, resorting on a website and conferences organized by the company. To this service we intend to add the recruitment of qualified professionals and the implementation of projects with value.',
 			'This is still just an idea among a group of collaborators we all hope one day to materialize.'
-		]
-	},
-	{
-		title : 'Yal Compiler',
-		img   : '/assets/projects/yal.png',
-		tags  : [
-			'java',
-			'jasmin',
-			'javacc',
-			'eclipse',
-			'os',
-		],
-		description : [
-			'Compiler yal2jvm in JavaCC which translates a fictional language, Yal, into Java bytecodes. The compiler generates files with JVM instructions that are translated by Jasmin to Java bytecodes.'
-		],
-		repo : 'https://github.com/vdribeiro/yal',
-	},
-	{
-		title : 'Minimum Spanning Tree',
-		img   : '/assets/projects/primkruskal.png',
-		tags  : [
-			'java',
-			'os',
-		],
-		description : [
-			'Simple Java program that generates a Minimum Spanning Tree from a graph loaded from a CSV file, using the Prim and Kruskal algorithms.'
-		],
-		repo : 'https://github.com/vdribeiro/graph',
-	},
-	{
-		title : 'Multimedia Project',
-		img   : '/assets/projects/max6.png',
-		tags  : [
-			'max',
-			'music',
-			'agm',
-		],
-		description : [
-			'Near the end of my master\'s, I attended the Automatic Generation of Music course. It was an extremely rewarding experience for me to join the world of music with the world of computers. The result is simply amazing. Building a library of patches in MAX6 also allowed me to extend my musical knowledge.'
 		]
 	},
 ]
