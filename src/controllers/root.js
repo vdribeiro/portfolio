@@ -8,6 +8,7 @@ angular.module('app')
   'AWARDS',
   'CONNECT',
   'RESEARCH',
+  'MUSIC',
   '$rootScope',
   '$timeout',
   'Utils',
@@ -21,6 +22,7 @@ angular.module('app')
     AWARDS,
     CONNECT,
     RESEARCH,
+    MUSIC,
     $rootScope,
     $timeout,
     Utils,
@@ -35,6 +37,7 @@ angular.module('app')
     $rootScope.awards = AWARDS
     $rootScope.connect = CONNECT
     $rootScope.research = RESEARCH
+    $rootScope.musics = MUSIC
 
     $rootScope.utils = Utils
     $rootScope.menu = MenuManager

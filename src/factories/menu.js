@@ -43,6 +43,9 @@ angular.module('app')
         {
           title : 'Projects',
         },
+        {
+          title : 'Music',
+        },
       ]
 
       var url = $location.path()

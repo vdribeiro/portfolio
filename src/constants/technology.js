@@ -122,6 +122,11 @@ angular.module('app')
         deprecated : true,
       },
       {
+        title : '.NET',
+        img   : '/assets/technology/dotnet.png',
+        deprecated : true,
+      },
+      {
         title : 'jMusic',
         img   : '/assets/technology/jmusic.png',
         deprecated : true,
@@ -129,11 +134,6 @@ angular.module('app')
       {
         title : 'JADE',
         img   : '/assets/technology/jade.png',
-        deprecated : true,
-      },
-      {
-        title : '.NET',
-        img   : '/assets/technology/dotnet.png',
         deprecated : true,
       },
     ]
@@ -190,6 +190,10 @@ angular.module('app')
       {
         title : 'Gulp',
         img   : '/assets/technology/gulp.png',
+      },
+      {
+        title : 'Retrofit',
+        img   : '/assets/technology/retrofit.png',
       },
       {
         title : 'OpenGL',

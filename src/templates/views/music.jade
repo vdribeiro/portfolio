@@ -1,0 +1,22 @@
+section#music(layout="column")
+  md-subheader.music-introduction-header
+    span.md-display-1 Music
+  .music-list(layout="column" layout-padding="")
+    
+    md-card(layout="column" ng-repeat="music in musics")
+      .music-content(layout="column")
+        .music-title(layout="row")
+          span.md-headline.music-title {{music.title}}
+          .music-links(layout="row" layout-align="start center")
+            a(
+              ng-if="!!music.link"
+              ng-href="{{music.link}}" 
+              target="_blank"
+            )
+              img.link(src='/assets/links/link.png')
+        .music-details(layout="row")
+          .music-description(layout="column")
+            span(ng-repeat="description in music.description") {{description}}
+          .flex
+          .music-image(ng-show="menu.isScreenBig()")
+            img.music(ng-src="{{music.img}}")

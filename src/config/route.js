@@ -19,6 +19,10 @@ angular.module('app')
         templateUrl : "/views/projects.html",
         controller: 'RootController',
     })
+    .when("/music", {
+        templateUrl : "/views/music.html",
+        controller: 'RootController',
+    })
     .otherwise({
       redirectTo: '/'
     })

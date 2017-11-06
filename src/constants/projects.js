@@ -6,6 +6,7 @@ angular.module('app')
 		img   : '/assets/projects/willows.png',
 		tags  : [
 			'android',
+			'retrofit',
 			'json',
 			'postman',
 			'photoshop',
@@ -36,7 +37,7 @@ angular.module('app')
 			'Farol is a multi-language offline travel guide for short city-break travellers with interactive maps of all the European capitals and other major cities, and high quality, up-to-date contents, which include points of interest, metro lines and more.',
 			'It also enables the creation of automatic daytrips based on the user’s preferences and available time. This project was made in a European Space Agency incubated company, LatitudeN GmbH. More can be found at Farol World.'
 		],
-		play : 'https://github.com/toflow',
+		play : 'https://play.google.com/store/apps/details?id=com.latituden.farol',
 	},
 	{
 		title : 'Berkovitsa-Godech',
@@ -55,7 +56,7 @@ angular.module('app')
 		description : [
 			'Berkovitsa-Godech is a travel guide dedicated to the Bulgarian region of the same name. It was commissioned by the Berkovitsa Municipality. It also provides an interactive OSM offline map with historical and demographic region information and up-to-date content.'
 		],
-		play : 'https://github.com/toflow',
+		play : 'https://play.google.com/store/apps/details?id=com.latituden.berkovitsa',
 	},
 	{
 		title : 'toFlow',
@@ -108,7 +109,7 @@ angular.module('app')
 			'The technical infrastructure consists of: a mobile framework to gather data from the device\'s available sensors; a server to process the data and store it in a database; a webpage to consult information in a user friendly way.',
 			'This framework is capable of handling a myriad sensors. Learn more at http://cloud.futurecities.up.pt/sensemycity/.'
 		],
-		link : 'http://cloud.futurecities.up.pt/sensemycity/',
+		link : 'https://futurecities.up.pt/site/',
 	},
 	{
 		title : 'SenseMyCity',
@@ -150,7 +151,7 @@ angular.module('app')
 			'Mobility is a major aspect of modern life, as one of the greatest contributors to the personal carbon footprint and to the pollution and noise in urban areas. Still, not enough information is available to quantize these factors in personal (e.g. impact of each trip) or urban scale (e.g. periods of highest pollution levels), or to relate them to geographic locations (e.g. areas most exposed to CO2 emissions).',
 			'The goal of the MyDrivingDroid project is to provide trip information, such as travel duration, the overall energy costs and carbon emissions, the areas of excessive traffic, among others. It is intended that users share this information using this platform in a collaborative environment. The application logs the smartphone’s embedded sensor data, and uses an external device known as an On-Board Diagnostics device, to gather vehicle data. The data is then used to develop a model that estimates the instantaneous fuel consumption, and consequently CO2 emissions, from the smartphone GPS data alone. The availability of this data will empower users to track more closely their emission record, hence make more conscious decisions about their personal mobility. Moreover, aggregating the data from multiple users into an urban scale perspective can provide finer grained indicators to urban planning.'
 		],
-		link : 'http://cloud.futurecities.up.pt/sensemycity/',
+		link : 'http://cloud.futurecities.up.pt/sensemycity/project/mydrivingdroid/',
 	},
 	{
 		title : 'Scope',
@@ -171,7 +172,7 @@ angular.module('app')
 			'Police work is one of the most stressful occupations and the exposure of police officers to stress sources over time has been associated with several physical, psychological and behavioral problems. The aim of the Scope project is to investigate psychological and physiological impact of stress among police officers working in real world conditions, by analysing gathered data using a smartphone and a Vital Jacket. The smartphone collects psychological measures of stress, coping, and georeferenced data in a transparent way, and police officers are required to press a button when experiencing a stressful event and respond to simple questions (voice or written).',
 			'Scope provides a stress management solution, developing the health and well-being of police officers, and increasing the safeguard of the overall community. It also contributes to the area of stress and coping ambulatory assessment.'
 		],
-		link : 'http://cloud.futurecities.up.pt/sensemycity/',
+		link : 'http://cloud.futurecities.up.pt/sensemycity/project/scope/',
 	},
 	{
 		title : 'Vital Responder 2',
@@ -192,7 +193,7 @@ angular.module('app')
 			'Monitoring Stress among First Responder professionals is a CMU-Portugal funded project with the main goal to provide secure, reliable and effective first-response systems in critical emergency scenarios. The goal of the Vital Responder research project is to explore the synergies between innovative wearable technologies, scattered sensor networks, intelligent building technology and precise localization services to provide secure, reliable and effective first-response systems in critical emergency scenarios. The Vital Responder 2 application aims at evaluating human stress in real-time under adverse conditions, by means of continuous online vital sign monitoring of first responders.',
 			'The Vital Jackets are provided by a high-tech company named Biodevices, which together with researchers at the University of Aveiro developed this non-intrusive wearable technology, as inconspicuous as a t-shirt, capable of gathering relevant information about the individual. Researchers at IT, University of Porto and Carnegie Mellon collaborated in viewing Vital Jackets as nodes of a distributed system that leverages the rich data sets with short-range communication, intelligent building technologies and localization capabilities. Ultimately the team will deploy a prototype infrastructure that enables continuous online monitoring of the collected information. Companies like McLaren Electronics and Petratex are also involved in the project.'
 		],
-		link : 'http://cloud.futurecities.up.pt/sensemycity/',
+		link : 'http://cloud.futurecities.up.pt/sensemycity/project/vitalresponder2/',
 	},
 	{
 		title : 'MoodSensor',
@@ -212,7 +213,7 @@ angular.module('app')
 		description : [
 			'MoodSensor is a project whose objectives are to map the happiness of citizens and characterize factors that influence it, namely mobility and environmental parameters. The app collects participants\' data and send them over WiFi to a cloud server where they are stored for processing. The tool is fully managed by the UP team, and only each participant has access to their own data.'
 		],
-		link : 'http://cloud.futurecities.up.pt/sensemycity/',
+		link : 'http://cloud.futurecities.up.pt/sensemycity/project/moodsensor/',
 	},
 	{
 		title : 'SCP',
@@ -232,7 +233,7 @@ angular.module('app')
 			'The SCP collects the raw data that is processed and tagged with stress classification. This information includes speech recordings (WAV files), along with annotation of the metadata and physiological sensor data. The application itself is not a single program, but an implementation of a client-server architecture where a computer, on which the main program is run, acts as the server, and a smartphone acts as the client. The smartphone runs a program that collects the physiological sensor data and relays it to the server via a wireless (ad hoc) LAN. The result of each collection workflow is a sample file structure, where the questionnaire XML, the audio WAV, and the annotation XML files are stored and ready for processing by the next steps of the project.',
 			'The physiological sensors are placed according to their specifications on the subject, switched on manually, and connect via Bluetooth to the smartphone. The application detects and connects to this devices, along with connecting to the serve app and relays timely updates to the server for visual monitoring (i.e. to assess if the information is being well received), but the whole sensor data is sequentially stored in the smartphone. At the end of the first and third (last) recording steps, these files are sent to the server for aggregation with the rest of the information (audio and subject/event details).'
 		],
-		link : 'http://cloud.futurecities.up.pt/sensemycity/',
+		link : 'http://cloud.futurecities.up.pt/sensemycity/project/scps/',
 	},
 	{
 		title : 'Portfolio',
@@ -265,7 +266,7 @@ angular.module('app')
 		description : [
 			'Induflex is a company dedicated to the upholstered furniture industry in Avintes, Portugal. After working a few summers in this company as a Computer Technician and Consultant, I also collaborated in the development of their website that I strongly recommend to consult.'
 		],
-		link : 'http://cloud.futurecities.up.pt/sensemycity/',
+		link : 'http://www.induflex.pt/',
 	},
 	{
 		title : 'ARMotion',
@@ -696,7 +697,8 @@ angular.module('app')
 		],
 		description : [
 			'Compiler yal2jvm in JavaCC which translates a fictional language, Yal, into Java bytecodes. The compiler generates files with JVM instructions that are translated by Jasmin to Java bytecodes.'
-		]
+		],
+		repo : 'https://github.com/vdribeiro/yal',
 	},
 	{
 		title : 'Minimum Spanning Tree',
@@ -721,28 +723,6 @@ angular.module('app')
 		description : [
 			'Near the end of my master\'s, I attended the Automatic Generation of Music course. It was an extremely rewarding experience for me to join the world of music with the world of computers. The result is simply amazing. Building a library of patches in MAX6 also allowed me to extend my musical knowledge.'
 		]
-	},
-	{
-		title : 'Green Grass of Tunnel',
-		img   : '/assets/projects/mum.png',
-		tags  : [
-			'music'
-		],
-		description : [
-			'Cover of a song from the Icelandic band Mum. It will always be a work in progress because the music deserves much more. I don\'t know if it\'s the country, but some of the most beautiful melodies I know come from Iceland and the inhabitants seem to be endowed with an extraordinary sensibility.'
-		],
-		link : 'http://cloud.futurecities.up.pt/sensemycity/',
-	},
-	{
-		title : 'Pachelbel\'s Canon',
-		img   : '/assets/projects/canon.png',
-		tags  : [
-			'music'
-		],
-		description : [
-			'I have no musical degree but I like to play a little bit of everything. When I started, the tendency was always to learn classical compositions like Cavatina, Romance d\'Amour or Asturias that I consider essential in my guitar repertoire. Unfortunately I did not give the proper attention to one of my favourite classical compositions, Canon, until several versions began to appear on Youtube. I decided to make my adaptation largely based on Trace Bundy\'s version. A work in progress.'
-		],
-		link : 'http://cloud.futurecities.up.pt/sensemycity/',
 	},
 ]
 )

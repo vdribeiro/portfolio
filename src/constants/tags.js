@@ -171,6 +171,10 @@ angular.module('app')
     title : 'OpenGL',
     img   : '/assets/tags/opengl.png',
   },
+  retrofit : {
+    title : 'Retrofit',
+    img   : '/assets/tags/retrofit.png',
+  },
   circleci : {
     title : 'CircleCI',
     img   : '/assets/tags/circleci.png',

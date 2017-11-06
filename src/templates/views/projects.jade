@@ -54,21 +54,21 @@ section#projects(layout="column")
       .project-content(layout="column")
         .project-title(layout="row")
           span.md-headline.project-title {{proj.title}}
-          .project-links(layout="row")
+          .project-links(layout="row" layout-align="start center")
             a(
-              ng-if="!!{{proj.link}}"
+              ng-if="!!proj.link"
               ng-href="{{proj.link}}" 
               target="_blank"
             )
               img.link(src='/assets/links/link.png')
             a(
-              ng-if="!!{{proj.repo}}"
+              ng-if="!!proj.repo"
               ng-href="{{proj.repo}}" 
               target="_blank"
             )
               img.repo(src='/assets/links/github.png')
             a(
-              ng-if="!!{{proj.play}}"
+              ng-if="!!proj.play"
               ng-href="{{proj.play}}" 
               target="_blank"
             )

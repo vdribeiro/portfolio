@@ -47,12 +47,12 @@ html(ng-app="app" ng-controller="RootController")
             .md-list-item-text(flex="") {{parent.title}}
             
             .expand(
-              ng-show="parent.children"
+              ng-if="!!parent.children"
               layout-align="start center"
               layout="row"
             )
-              i.material-icons(ng-show="!parent.show") expand_more
-              i.material-icons(ng-show="parent.show") expand_less
+              i.material-icons(ng-if="!parent.show") expand_more
+              i.material-icons(ng-if="parent.show") expand_less
           
           md-list-item(
             ng-show="parent.show"
