@@ -242,12 +242,16 @@ angular.module('app')
 		tags  : [
 			'android',
 			'java',
+			'eclipse',
+			'android_studio',
+			'mobile',
 		],
 		description : [
 			'Seeing that I have been developing for Android since Eclair (2.1), everytime there was an update, or I wanted a shiny new non-existing feature, I tried to keep my applications up to date and implemented compatibility code. The result was an extensive library that accompanies me in all of my Android projects through the years. My Companion Library.',
 			'Some time later the official Android Support Libraries came and eased up most of that work. Still, it remains indispensable for my work.',
 			'It includes helpers for storage and security, accounts, notifications, sensors, database, networks, location and time, telephony, media, math and physics functions, toolbar, animations, dialogs, parsers and many more other utilities.'
-		]
+		],
+		repo : 'https://github.com/vdribeiro/companion_library',
 	},
 	{
 		title : 'Portfolio',
