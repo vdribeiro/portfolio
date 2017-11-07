@@ -16,8 +16,9 @@ angular.module('app')
 		],
 		description : [
 			'Platform for the Willows Pre-School group that promotes an easier and closer relationship between teachers and parents.',
-			'It consists in two separate applications for teachers and parents respectively. The teacher inputs the data of the students, whilst the parents can see the achievements, progress and other filtered evaluations of their wards. It enables communication via inbox and also possesses an events feature that syncs with the local calendar. Teachers and parents can also share photos with an albums feature.'
-		]
+			'It consists of two separate applications for teachers and parents respectively. The teacher inputs the data of the students, whilst the parents can see the filtered evaluations of their wards, achievements and progress. It enables communication between the parties and also possesses an events feature that syncs with the local calendar. Teachers and parents can also share photos with an albums feature.'
+		],
+		link : 'http://home.willowspreschool.org.uk/',
 	},
 	{
 		title : 'Farol City Guides',
@@ -37,6 +38,7 @@ angular.module('app')
 			'Farol is a multi-language offline travel guide for short city-break travellers with interactive maps of all the European capitals and other major cities, and high quality, up-to-date contents, which include points of interest, metro lines and more.',
 			'It also enables the creation of automatic daytrips based on the user’s preferences and available time. This project was made in a European Space Agency incubated company, LatitudeN GmbH. More can be found at Farol World.'
 		],
+		link : 'http://www.farolworld.com/',
 		play : 'https://play.google.com/store/apps/details?id=com.latituden.farol',
 	},
 	{
@@ -85,7 +87,7 @@ angular.module('app')
 		description : [
 			'An innovative solution for real-time generation of integrated platforms.'
 		],
-		repo : 'https://github.com/toflow',
+		link : 'http://toflow.com/',
 	},
 	{
 		title : 'SenseMyCity Framework',
