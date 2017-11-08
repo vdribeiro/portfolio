@@ -71,14 +71,6 @@ angular.module('app')
       this.screen.show = true
     }
 
-    MenuManager.prototype.toggleSidebar = function() {
-
-      var sidebar = $mdSidenav('sidebar')
-      if (_.isNil(sidebar)) return
-
-      sidebar.toggle()
-    }
-
     MenuManager.prototype.watch = function(scope) {
       var self = this
 
@@ -91,6 +83,31 @@ angular.module('app')
       })
     }
 
+    MenuManager.prototype.isScreenPortrait = function() {
+
+      return $mdMedia('portrait')
+    }
+
+    MenuManager.prototype.isScreenBig = function() {
+
+      return $mdMedia(this.minWidth)
+    }
+
+    MenuManager.prototype.toggleSidebar = function() {
+
+      var sidebar = $mdSidenav('sidebar')
+      if (_.isNil(sidebar)) return
+
+      sidebar.toggle()
+    }
+
+    MenuManager.prototype.isSidebarLocked = function() {
+
+      if ($mdMedia('portrait')) return false
+
+      return $mdMedia(this.minWidth)
+    }
+
     MenuManager.prototype.toggleSidebarByScreenSize = function(big) {
 
       this.screen.bigScreen = big
@@ -101,18 +118,6 @@ angular.module('app')
       if (this.screen.bigScreen) return sidebar.open()
 
       return sidebar.close()
-    }
-
-    MenuManager.prototype.isScreenBig = function() {
-
-      return $mdMedia(this.minWidth)
-    }
-
-    MenuManager.prototype.isSidebarLocked = function() {
-
-      if ($mdMedia('portrait')) return false
-
-      return $mdMedia(this.minWidth)
     }
 
     MenuManager.prototype.isSelected = function(parent, child) {

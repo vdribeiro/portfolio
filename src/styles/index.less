@@ -258,6 +258,13 @@ span.tag {
   align-self: center;
 }
 
+.project-all {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .project-content {
   padding: 16px;
 }
@@ -283,6 +290,12 @@ img.play {
   min-width: 200px;
 }
 
+@media all and (min-width: 1900px) {
+  md-card.project-card {
+    width: 49%
+  }
+}
+
 .project-image {
   padding-left: 16px;
   padding-right: 16px;
@@ -295,6 +308,7 @@ img.project {
   max-width: 230px;
   min-width: 50px;
   border: 1px solid rgba(0,0,0,0.12);
+  float: right;
 }
 
 .project-tag-divider {
