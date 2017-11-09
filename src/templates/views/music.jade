@@ -1,22 +1,25 @@
 section#music(layout="column")
   md-subheader.music-introduction-header
     span.md-display-1 Music
-  .music-list(layout="column" layout-padding="")
+  .music-list(layout="column")
     
-    md-card(layout="column" ng-repeat="music in musics")
-      .music-content(layout="column")
-        .music-title(layout="row")
-          span.md-headline.music-title {{music.title}}
-          .music-links(layout="row" layout-align="start center")
-            a(
-              ng-if="!!music.link"
-              ng-href="{{music.link}}" 
-              target="_blank"
-            )
-              img.link(src='/assets/links/link.png')
-        .music-details(layout="row")
-          .music-description(layout="column")
-            span(ng-repeat="description in music.description") {{description}}
-          .flex
-          .music-image(ng-show="menu.isScreenBig()")
+    .project-all(layout="row" layout-padding="")
+      md-card.music-card(layout="column" ng-repeat="music in musics")
+        .music-content(layout="column")
+          .music-title(layout="row")
+            span.md-headline.music-title {{music.title}}
+            .music-links(layout="row" layout-align="start center")
+              a(
+                ng-if="!!music.link"
+                ng-href="{{music.link}}" 
+                target="_blank"
+              )
+                img.link(src='/assets/links/link.png')
+          .music-details(layout="row")
+            .music-description(layout="column")
+              span(ng-repeat="description in music.description") {{description}}
+            .flex
+            .music-image(ng-if="!menu.isScreenPortrait()")
+              img.music(ng-src="{{music.img}}")
+          .music-image(ng-if="menu.isScreenPortrait()" style="padding-top: 16px;")
             img.music(ng-src="{{music.img}}")

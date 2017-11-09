@@ -337,6 +337,23 @@ section#music {
   line-height: 1.5;
 }
 
+.music-all {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+md-card.music-card {
+  width: 100%;
+}
+
+@media all and (min-width: 1820px) {
+  md-card.music-card {
+    width: 49%;
+  }
+}
+
 .music-content {
   padding: 16px;
 }
