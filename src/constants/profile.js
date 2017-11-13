@@ -35,6 +35,7 @@ angular.module('app')
         'Technology',
         'Knowledge',
         'Music',
+        'Swimming',
       ]
     },
     {
