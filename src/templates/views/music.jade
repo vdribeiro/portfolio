@@ -2,15 +2,8 @@ section#music(layout="column")
   md-subheader.music-introduction-header
     span.md-display-1 Music
   .music-list(layout="column")
-    .music-temp(layout-padding="")
-      span.md-headline Page under construction 
-    .music-band(layout-padding="")
-      a(
-        href="https://www.facebook.com/oselesband/" 
-        target="_blank"
-      )
-        span.md-headline.music-band Check out Os Eles
-    .music-all(layout="row" layout-padding="")
+    
+    .project-all(layout="row" layout-padding="")
       md-card.music-card(layout="column" ng-repeat="music in musics")
         .music-content(layout="column")
           .music-title(layout="row")
